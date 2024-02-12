@@ -1,6 +1,9 @@
 <script>
+import NavbarHeader from './HeaderComponents/NavbarHeader.vue';
+
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    components: { NavbarHeader }
 };
 </script>
 
@@ -13,6 +16,7 @@ export default {
             <span><font-awesome-icon class="text-white fa-xl ms-5" :icon="['fab', 'facebook-f']" /></span>
             <span> <font-awesome-icon class="text-white fa-xl ms-3" :icon="['fab', 'instagram']" /></span>
             <span><font-awesome-icon class="text-white fa-xl ms-3" :icon="['fab', 'twitter']" /></span>
+            <NavbarHeader />
 
         </div>
     </header>
@@ -21,6 +25,7 @@ export default {
 <style>
 .container {
     background-color: black;
+    padding-top: 15px;
 }
 
 header {
