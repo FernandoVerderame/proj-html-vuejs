@@ -39,8 +39,7 @@ export default {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 100px;
-        transform: translateY(100%);
+        bottom: 0;
         background-color: #000;
 
         border-radius: 20px;
