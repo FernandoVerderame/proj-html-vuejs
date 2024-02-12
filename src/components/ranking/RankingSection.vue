@@ -1,9 +1,15 @@
 <script>
+import LeagueTable from './LeagueTable.vue';
+
 export default {
-    name: 'RankingSection'
+    name: 'RankingSection',
+
+    components: { LeagueTable }
 };
 </script>
 
-<template></template>
+<template>
+    <LeagueTable />
+</template>
 
 <style></style>
