@@ -4,6 +4,47 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <div class="player-card">
+        <figure>
+            <img src="../../assets/img/player1.jpg" alt="Player 1" class="img-fluid">
+            <div class="player-info">
+                <h6>07</h6>
+                <p>Adam Brown - Forwarder</p>
+            </div>
+        </figure>
+    </div>
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.player-card {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+
+
+    figure {
+        overflow: hidden;
+
+        img {
+            border-radius: 20px;
+
+        }
+    }
+
+    .player-info {
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        transform: translateY(100%);
+        background-color: #000;
+
+        border-radius: 20px;
+    }
+
+}
+</style>
