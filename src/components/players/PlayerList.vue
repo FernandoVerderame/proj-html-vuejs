@@ -1,6 +1,9 @@
 <script>
+import PlayerCard from './PlayerCard.vue';
+
 export default {
-    name: 'PlayerList'
+    name: 'PlayerList',
+    components: { PlayerCard }
 };
 </script>
 
@@ -8,7 +11,9 @@ export default {
     <!-- Section Players -->
     <section id="players">
         <div class="container">
-            <div class="row"></div>
+            <div class="row">
+                <PlayerCard />
+            </div>
         </div>
     </section>
 </template>
