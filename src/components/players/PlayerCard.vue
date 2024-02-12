@@ -1,16 +1,25 @@
 <script>
 export default {
-    name: 'PlayerCard'
+    name: 'PlayerCard',
+    props: {
+        players: Object
+    },
+    computed: {
+        playerSrc() {
+            const url = new URL(`../../assets/img/${this.players.src}`, import.meta.url);
+            return url.href;
+        }
+    }
 }
 </script>
 
 <template>
     <div class="player-card">
         <figure>
-            <img src="../../assets/img/player1.jpg" alt="Player 1" class="img-fluid">
+            <img :src="playerSrc" :alt="players.name" class="img-fluid">
             <div class="player-info">
-                <h6>07</h6>
-                <p>Adam Brown - Forwarder</p>
+                <h6>{{ players.shirtNumber }}</h6>
+                <p>{{ players.name }} - {{ players.role }}</p>
             </div>
         </figure>
     </div>
