@@ -4,6 +4,18 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+    <!-- Section Players -->
+    <section id="players">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </section>
+</template>
 
-<style></style>
+<style lang="scss" scoped>
+#players {
+    background-image: url('../../assets/img/player.jpg');
+    height: 700px;
+}
+</style>
