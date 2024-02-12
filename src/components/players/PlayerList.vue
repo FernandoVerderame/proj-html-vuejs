@@ -12,7 +12,9 @@ export default {
     <section id="players">
         <div class="container">
             <div class="row">
-                <PlayerCard />
+                <div class="col col-3">
+                    <PlayerCard />
+                </div>
             </div>
         </div>
     </section>
