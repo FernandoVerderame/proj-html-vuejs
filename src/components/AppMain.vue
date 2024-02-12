@@ -1,9 +1,17 @@
 <script>
+import CurrentMatch from './matches/CurrentMatch.vue';
+import UpcomingMatches from './matches/UpcomingMatches.vue';
+
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+
+    components: { CurrentMatch, UpcomingMatches }
 };
 </script>
 
-<template></template>
+<template>
+    <CurrentMatch />
+    <UpcomingMatches />
+</template>
 
 <style></style>
