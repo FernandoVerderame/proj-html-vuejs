@@ -22,11 +22,16 @@ export default {
     <!-- Section Players -->
     <section id="players">
         <div class="container">
-            <h3 class="text-center">Players</h3>
+            <div class="title text-center">
+                <h3>Players</h3>
+            </div>
             <div class="row">
                 <div class="col col-3 d-flex align-items-center" v-for="(player, i) in players" :key="i">
-                    <PlayerCard />
+                    <PlayerCard :players="player" />
                 </div>
+            </div>
+            <div class="action text-center">
+                <button class="btn btn-primary">View All Players</button>
             </div>
         </div>
     </section>
@@ -35,15 +40,23 @@ export default {
 <style lang="scss" scoped>
 #players {
     background-image: url('../../assets/img/player.jpg');
-    height: 700px;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
 
-    .col {
-        margin-top: 40px;
+    .title {
+        margin-bottom: 50px;
+
+        h3 {
+            color: #fff;
+            font-weight: 700;
+            vertical-align: top;
+            font-size: 35px;
+        }
     }
 
-    h3 {
-        color: #fff;
-        padding: 20px 0;
+    .action {
+        margin-top: 50px;
     }
 }
 </style>
