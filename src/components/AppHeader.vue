@@ -1,13 +1,15 @@
 <script>
+import JumbotronHeader from './HeaderComponents/JumbotronHeader.vue';
 import NavbarHeader from './HeaderComponents/NavbarHeader.vue';
 
 export default {
     name: 'AppHeader',
-    components: { NavbarHeader }
+    components: { NavbarHeader, JumbotronHeader }
 };
 </script>
 
 <template>
+    <JumbotronHeader />
     <header>
         <div class="container text-center">
             <img src="../assets/img/sponsor1.png" alt="">
@@ -17,18 +19,22 @@ export default {
             <span> <font-awesome-icon class="text-white fa-xl ms-3" :icon="['fab', 'instagram']" /></span>
             <span><font-awesome-icon class="text-white fa-xl ms-3" :icon="['fab', 'twitter']" /></span>
             <NavbarHeader />
-
         </div>
+
     </header>
 </template>
 
 <style>
 .container {
-    background-color: black;
     padding-top: 15px;
 }
 
 header {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
 }
 </style>

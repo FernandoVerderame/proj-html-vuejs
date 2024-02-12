@@ -2,7 +2,7 @@
 export default {
     name: 'NavbarHeader',
     data: () => ({
-        links: [
+        headerLinks: [
             {
                 text: 'Home',
                 url: '#',
@@ -48,7 +48,7 @@ export default {
     <nav class="d-flex align-items-center justify-content-center mt-3">
         <!--HEADER'S LINKS-->
         <ul class="header-links d-flex align-items-cente gap-5 list-unstyled">
-            <li class="text-white" v-for="(link, i) in links" :key="i">{{ link.text.toUpperCase() }}</li>
+            <li class="text-white fw-bold" v-for="(link, i) in headerLinks" :key="i">{{ link.text.toUpperCase() }}</li>
         </ul>
     </nav>
 </template>
