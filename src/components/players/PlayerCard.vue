@@ -43,6 +43,18 @@ export default {
         background-color: #000;
 
         border-radius: 20px;
+
+        h6 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 400;
+            opacity: 0.7;
+            font-size: 18px;
+            margin: 0;
+        }
     }
 
 }
