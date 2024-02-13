@@ -80,7 +80,7 @@ export default {
     <!-- Data e Luogo -->
     <div class="details d-flex justify-content-center">
         <span class="date">{{ date }}</span>
-        <span class="Stadium">{{ stadium }}</span>
+        <span class="stadium">{{ stadium }}</span>
     </div>
 </template>
 
@@ -100,5 +100,23 @@ export default {
     font-weight: 700;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.date::before,
+.stadium::before {
+    content: "";
+    background-size: 1rem 1rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.date::before {
+    background-image: url(../../assets/img/timetable.png);
+}
+
+.stadium::before {
+    background-image: url(../../assets/img/add.png);
 }
 </style>
