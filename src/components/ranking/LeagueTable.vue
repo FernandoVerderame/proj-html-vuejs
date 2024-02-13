@@ -10,7 +10,7 @@ export default {
         <table class="table border border-light-subtl">
             <thead>
                 <tr>
-                    <th class="team">Team</th>
+                    <th class="team ps-3">Team</th>
                     <th>w</th>
                     <th>d</th>
                     <th>l</th>
