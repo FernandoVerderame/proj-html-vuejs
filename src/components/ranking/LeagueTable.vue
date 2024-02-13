@@ -88,12 +88,14 @@ export default {
         ]
     }),
 
+    /*
     computed: {
         teamSrc() {
             const url = new URL(`../../assets/img/${this.teams.logo}.png`, import.meta.url);
             return url.href;
         }
     }
+    */
 };
 </script>
 
