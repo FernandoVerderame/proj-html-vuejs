@@ -95,13 +95,13 @@ export default {
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
-                            <FooterList />
+                            <FooterList v-for="(link, i) in educationLinks" :key="i" />
                         </ul>
                     </div>
                     <div class="links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <FooterList />
+                            <FooterList v-for="(link, i) in quickLinks" :key="i" />
                         </ul>
                     </div>
                 </div>
