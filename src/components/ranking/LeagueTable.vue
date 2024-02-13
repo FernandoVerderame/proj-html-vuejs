@@ -100,11 +100,13 @@ export default {
 </script>
 
 <template>
+    <!-- Teams ranking -->
     <div class="league-table">
         <h2>League Table</h2>
         <table class="table border border-light-subtl">
             <thead>
                 <tr>
+                    <!-- Header ranking -->
                     <th class="team ps-3">Team</th>
                     <th>w</th>
                     <th>d</th>
@@ -114,19 +116,34 @@ export default {
             </thead>
             <tbody>
                 <tr v-for="team in teams" :key="team.id">
+                    <!-- Team -->
                     <td class="team">
+                        <!-- Team ID -->
                         <span class="ps-2">{{ team.id }}</span>
+
+                        <!-- Team image -->
                         <img :src="`src/assets/img/${team.logo}.png`" :alt="team.name">
+
+                        <!-- Team name -->
                         <span>{{ team.name }}</span>
                     </td>
+
+                    <!-- Wins -->
                     <td>{{ team.win }}</td>
+
+                    <!-- Draw -->
                     <td>{{ team.draw }}</td>
+
+                    <!-- Lose -->
                     <td>{{ team.lose }}</td>
+
+                    <!-- Points -->
                     <td class="score">{{ team.points }}</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
+                    <!-- Show ranking button -->
                     <td role="button" colspan="5">View Full League Table</td>
                 </tr>
             </tfoot>

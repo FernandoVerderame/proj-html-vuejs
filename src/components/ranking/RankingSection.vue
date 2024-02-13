@@ -10,12 +10,15 @@ export default {
 </script>
 
 <template>
+    <!-- Ranking -->
     <section id="ranking">
         <div class="container">
             <div class="d-flex gap-5">
                 <LeagueTable />
                 <FixturesAndResults />
             </div>
+
+            <!-- Advertising -->
             <div class="reklam d-flex justify-content-center">
                 <img src="../../assets/img/reklam.jpg" alt="reklam">
             </div>

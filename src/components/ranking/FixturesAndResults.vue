@@ -145,19 +145,26 @@ export default {
 </script>
 
 <template>
+    <!-- Matches -->
     <div class="results">
         <h2>Fixtures & Results</h2>
         <div class="matches">
             <div v-for="(match, i) in calendar" :key="match.id" :class="{ even: i % 2 === 0, odd: i % 2 !== 0 }"
                 class="card-match d-flex justify-content-center align-items-center">
+
+                <!-- Home team -->
                 <img :src="`src/assets/img/${findTeamData(match.team1ID).logo}.png`"
                     :alt="findTeamData(match.team1ID).name">
                 <div class="team-name">{{ findTeamData(match.team1ID).name }}</div>
                 <div class="versus">vs</div>
+
+                <!-- Away team -->
                 <div class="team-name">{{ findTeamData(match.team2ID).name }}</div>
                 <img :src="`src/assets/img/${findTeamData(match.team2ID).logo}.png`"
                     :alt="findTeamData(match.team2ID).name">
             </div>
+
+            <!-- Show matches button -->
             <div role="button" class="button-fixtures">View Full Fixtures</div>
         </div>
     </div>
