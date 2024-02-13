@@ -1,7 +1,43 @@
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    data: () => ({
+        educationLinks: [
+            {
+                text: 'fixtures & results',
+                url: '#'
+            },
+            {
+                text: 'league table',
+                url: '#'
+            },
+            {
+                text: 'players',
+                url: '#'
+            },
+            {
+                text: 'gallery',
+                url: '#'
+            }],
+        quickLinks: [
+            {
+                text: 'home',
+                url: '#'
+            },
+            {
+                text: 'blog',
+                url: '#'
+            },
+            {
+                text: 'gallery',
+                url: '#'
+            },
+            {
+                text: 'contact',
+                url: '#'
+            }]
+    })
 };
 </script>
 
