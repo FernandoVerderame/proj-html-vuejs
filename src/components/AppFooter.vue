@@ -43,8 +43,8 @@ export default {
     }),
     methods: {
         sendForm(term) {
-            const email = 'La tua email è: '
-            console.log(email + term)
+            const email = 'La tua email è: ';
+            console.log(email + term);
         }
     }
 };
