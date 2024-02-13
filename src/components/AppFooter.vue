@@ -62,20 +62,7 @@ export default {
             <div class="row">
                 <FooterInfo />
                 <FooterNews @submit-form="sendForm" />
-                <div class="col col-4 offset-1 footer-list">
-                    <div class="education">
-                        <h4>Education</h4>
-                        <ul>
-                            <LinkList v-for="(link, i) in educationLinks" :key="i" :link="link" />
-                        </ul>
-                    </div>
-                    <div class="links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <LinkList v-for="(link, i) in quickLinks" :key="i" :link="link" />
-                        </ul>
-                    </div>
-                </div>
+                <FooterList />
             </div>
         </div>
 
@@ -87,25 +74,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.footer-list {
-    display: flex;
-    gap: 60px;
-}
-
-
-.footer-list {
-
-    h4 {
-        margin-bottom: 20px;
-        font-size: 25px;
-        font-weight: 700;
-    }
-
-    ul {
-        padding: 0;
-    }
-}
-
 footer {
     background-image: url('../assets/img/footer-bg-football.jpg');
     color: #fff;
