@@ -82,7 +82,7 @@ export default {
                         </a>
                     </div>
                 </div>
-                <div class="col col-5">
+                <div class="col col-4">
                     <div class="news">
                         <div class="news-text">
                             <h3>Join Our Newsletter</h3>
@@ -94,7 +94,7 @@ export default {
                         <FooterForm />
                     </div>
                 </div>
-                <div class="col col-4 footer-list">
+                <div class="col col-4 offset-1 footer-list">
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
