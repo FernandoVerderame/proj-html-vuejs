@@ -12,7 +12,7 @@ export default {
         <!-- Footer Top -->
         <div class="footer-top container py-4">
             <div class="row">
-                <div class="col">
+                <div class="col col-3">
                     <div class="logo my-4">
                         <figure>
                             <img src="../assets/img/logo-footer-football.png" alt="Logo">
@@ -43,11 +43,17 @@ export default {
                         </a>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="news"></div>
+                <div class="col col-5">
+                    <div class="news">
+                        <div class="news-text">
+                            <h3>Join Our Newsletter</h3>
+                            <p>Subscribe to be informed about important developments in our club and football world.</p>
+                        </div>
+                        <div class="news-form"></div>
+                    </div>
                     <div class="form"></div>
                 </div>
-                <div class="col footer-list">
+                <div class="col col-4 footer-list">
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
