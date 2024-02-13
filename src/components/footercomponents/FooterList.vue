@@ -1,6 +1,12 @@
 <script>
+import LinkList from './LinkList.vue';
 export default {
-    name: 'FooterList'
+    name: 'FooterList',
+    components: { LinkList },
+    props: {
+        educationLinks: Array,
+        quickLinks: Array
+    }
 }
 </script>
 
