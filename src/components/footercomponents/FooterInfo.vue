@@ -44,6 +44,10 @@ export default {
         list-style-type: none;
         padding: 0;
     }
+
+    p {
+        font-size: 18px;
+    }
 }
 
 .logo {
