@@ -91,7 +91,7 @@ export default {
                         <div class="news-form"></div>
                     </div>
                     <div class="form">
-                        <FooterForm />
+                        <FooterForm placeholder="Your Email Addres" />
                     </div>
                 </div>
                 <div class="col col-4 offset-1 footer-list">

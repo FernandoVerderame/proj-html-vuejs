@@ -3,14 +3,15 @@ export default {
     name: 'FooterForm',
     data: () => ({
         searchTerm: ''
-    })
+    }),
+    props: { placeholder: String }
 }
 </script>
 
 <template>
     <form>
         <div class="input-group">
-            <input type="text" class="form-control" v-model="searchTerm">
+            <input type="text" class="form-control" v-model="searchTerm" :placeholder="placeholder">
         </div>
         <div class="button-group mt-2">
             <button class="btn">Subscribe &#8594;</button>
