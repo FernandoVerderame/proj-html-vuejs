@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'footerList',
+    name: 'LinkList',
     props: { link: Object },
     computed: {
         upperCaseLink() {
