@@ -3,7 +3,6 @@ export default {
     name: 'JumbotronHeader',
     data: () => ({
         slider: [
-
             {
                 id: 1,
                 image: 'slider1-1.jpg',
@@ -36,8 +35,7 @@ export default {
     computed: {
         lastIndex() {
             return this.slider.length - 1
-        }
-
+        },
     },
 
     methods: {
@@ -48,10 +46,19 @@ export default {
             }
         },
 
-        createImagePath(imageName) {
-            const url = new URL(`../../assets/img/${imageName}`, import.meta.url);
-            return url.href;
-        }
+        goPrevIndex() {
+            if (this.currentIndex === 0) {
+                this.currentIndex = this.lastIndex
+            } else {
+                this.currentIndex--
+            }
+        },
+
+        // createImagePath(image) {
+        //     const url = new URL(`../../assets/img/${image}`, import.meta.url);
+        //     console.log(url)
+        //     return url.href
+        // }
     }
 }
 
@@ -60,7 +67,7 @@ export default {
 <template>
     <div class="jumbotron">
         <figure v-for="(slide, i) in slider" :key="i" :class="{ active: i === currentIndex }">
-            <img class="jumbotron-img" :src="createImagePath(slide.image)" alt="#">
+            <img class="jumbotron-img" :src="`src/assets/img/${slide.image}`" alt="">
             <div class="jumbotron-text text-center lh-sm container-jumbotron">
                 <p class="big-text">{{ slide.primaryText }}</p>
                 <p class="fw-bold">{{ slide.description }}</p>
@@ -68,7 +75,7 @@ export default {
                 <p>{{ slide.image }}</p>
             </div>
         </figure>
-        <div class="round button-slider prev" role="button">
+        <div class="round button-slider prev" role="button" @click="goPrevIndex">
             <FontAwesomeIcon :icon="['fas', 'chevron-left']" />
         </div>
         <div class="round button-slider next" role="button" @click="goNextIndex">
