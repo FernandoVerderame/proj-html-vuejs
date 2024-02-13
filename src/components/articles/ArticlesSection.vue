@@ -67,6 +67,7 @@ export default {
 #carousel {
     background-color: black;
     height: 500px;
+    overflow: hidden;
 }
 
 .col {

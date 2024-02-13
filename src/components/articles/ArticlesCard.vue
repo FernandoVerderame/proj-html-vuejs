@@ -14,7 +14,7 @@ export default {
 </script>
 <template>
     <div class="card">
-        <img src="../../assets/img/news1-1-150x150.png" class="card-img-top" alt="...">
+        <img :src="articleImage" class="card-img-top" alt="...">
         <p class="card-text"><small class="text-muted">{{ article.date }}</small></p>
         <div class="card-body">
             <h5 class="card-title">{{ article.title }}</h5>
