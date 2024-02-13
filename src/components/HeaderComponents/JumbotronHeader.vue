@@ -71,8 +71,7 @@ export default {
             <div class="jumbotron-text text-center lh-sm container-jumbotron">
                 <p class="big-text">{{ slide.primaryText }}</p>
                 <p class="fw-bold">{{ slide.description }}</p>
-                <button>Learn More</button>
-                <p>{{ slide.image }}</p>
+                <button class="mt-3">Learn More</button>
             </div>
         </figure>
         <div class="round button-slider prev" role="button" @click="goPrevIndex">
@@ -87,11 +86,12 @@ export default {
 <style lang="scss" scoped>
 .jumbotron {
     position: relative;
-    height: 700px;
+    height: 900px;
 
     img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
     }
 }
 

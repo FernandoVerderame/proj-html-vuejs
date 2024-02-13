@@ -45,12 +45,18 @@ export default {
 </script>
 
 <template>
-    <nav class="d-flex align-items-center justify-content-center mt-3">
+    <nav class="d-flex align-items-center justify-content-center mt-4">
         <!--HEADER'S LINKS-->
         <ul class="header-links d-flex align-items-cente gap-5 list-unstyled">
-            <li class="text-white fw-bold" v-for="(link, i) in headerLinks" :key="i">{{ link.text.toUpperCase() }}</li>
+            <li class="text-white fw-bold" v-for="(link, i) in headerLinks" :key="i">
+                <a href="#" class="text-decoration-none text-white">{{ link.text.toUpperCase() }}</a>
+            </li>
         </ul>
     </nav>
 </template>
 
-<style></style>
+<style>
+.header-links li:hover {
+    border-bottom: 2px solid white;
+}
+</style>
