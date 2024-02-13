@@ -10,22 +10,28 @@ export default {
     <footer>
 
         <!-- Footer Top -->
-        <div class="footer-top container">
+        <div class="footer-top container py-4">
             <div class="row">
                 <div class="col">
-                    <div class="logo">
+                    <div class="logo my-4">
                         <figure>
                             <img src="../assets/img/logo-footer-football.png" alt="Logo">
                         </figure>
                     </div>
-                    <div class="info">
+                    <div class="info my-4">
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <p>New Jersey, USA</p>
+                            </li>
+                            <li>
+                                <p>+1 (234) 567 89 10</p>
+                            </li>
+                            <li>
+                                <p>example@example.com</p>
+                            </li>
                         </ul>
                     </div>
-                    <div class="social">
+                    <div class="social my-4">
                         <a href="#">
                             <FontAwesomeIcon icon="fa-brands fa-facebook-f" class="fa-2x" />
                         </a>
@@ -77,6 +83,12 @@ export default {
 .footer-list {
     display: flex;
     gap: 40px;
+}
+
+.info {
+    ul {
+        list-style-type: none;
+    }
 }
 
 .social {
