@@ -12,8 +12,18 @@ export default {
         <div class="footer-top container">
             <div class="row">
                 <div class="col">
-                    <div class="logo"></div>
-                    <div class="info"></div>
+                    <div class="logo">
+                        <figure>
+                            <img src="../assets/img/logo-footer-football.png" alt="Logo">
+                        </figure>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
                     <div class="social"></div>
                 </div>
                 <div class="col">
@@ -21,8 +31,26 @@ export default {
                     <div class="form"></div>
                 </div>
                 <div class="col">
-                    <div class="education"></div>
-                    <div class="links"></div>
+                    <div class="education">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
