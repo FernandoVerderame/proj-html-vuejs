@@ -11,11 +11,15 @@ export default {
 
 <template>
     <section id="ranking">
-        <div class="container">
+        <div class="container d-flex">
             <LeagueTable />
             <FixturesAndResults />
         </div>
     </section>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.container {
+    gap: 50px;
+}
+</style>

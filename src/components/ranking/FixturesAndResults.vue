@@ -4,6 +4,13 @@ export default {
 };
 </script>
 
-<template></template>
+<template>
+    <div class="results border border-primary">
+    </div>
+</template>
 
-<style></style>
+<style lang="scss" scoped>
+.results {
+    width: 100%;
+}
+</style>
