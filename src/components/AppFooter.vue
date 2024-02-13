@@ -1,12 +1,12 @@
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import FooterList from './footercomponents/FooterList.vue';
+import LinkList from './footercomponents/LinkList.vue';
 import FooterInfo from './footercomponents/FooterInfo.vue';
 import FooterNews from './footercomponents/FooterNews.vue'
 
 export default {
     name: 'AppFooter',
-    components: { FooterList, FooterInfo, FooterNews },
+    components: { LinkList, FooterInfo, FooterNews },
     data: () => ({
         educationLinks: [
             {
@@ -60,18 +60,18 @@ export default {
         <div class="footer-top container py-5">
             <div class="row">
                 <FooterInfo />
-                <FooterNews />
+                <FooterNews @submit-form="sendForm" />
                 <div class="col col-4 offset-1 footer-list">
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
-                            <FooterList v-for="(link, i) in educationLinks" :key="i" :link="link" />
+                            <LinkList v-for="(link, i) in educationLinks" :key="i" :link="link" />
                         </ul>
                     </div>
                     <div class="links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <FooterList v-for="(link, i) in quickLinks" :key="i" :link="link" />
+                            <LinkList v-for="(link, i) in quickLinks" :key="i" :link="link" />
                         </ul>
                     </div>
                 </div>
