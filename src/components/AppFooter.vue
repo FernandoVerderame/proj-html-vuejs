@@ -88,6 +88,13 @@ export default {
 .info {
     ul {
         list-style-type: none;
+        padding: 0;
+    }
+}
+
+.logo {
+    img {
+        height: 75px;
     }
 }
 
