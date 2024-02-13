@@ -95,6 +95,12 @@ export default {
 
     .details {
         background-color: rgba($color: #000000, $alpha: 0.3);
+
+    }
+
+    .date::before,
+    .stadium::before {
+        filter: invert(1);
     }
 }
 </style>

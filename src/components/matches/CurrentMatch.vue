@@ -55,7 +55,7 @@ export default {
 
 <template>
     <!-- Match -->
-    <section class="daily-match text-center container py-3">
+    <section class="daily-match text-center container pt-3 pb-4">
         <MatchCard :team1ID="calendar[0].team1ID" :team2ID="calendar[0].team2ID" :date="calendar[0].date"
             :stadium="calendar[0].stadium" />
         <!-- More details button -->
