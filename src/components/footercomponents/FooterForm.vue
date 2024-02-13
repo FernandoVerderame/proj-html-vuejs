@@ -1,13 +1,16 @@
 <script>
 export default {
-    name: 'FooterForm'
+    name: 'FooterForm',
+    data: () => ({
+        searchTerm: ''
+    })
 }
 </script>
 
 <template>
     <form>
         <div class="input-group">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" v-model="searchTerm">
         </div>
         <div class="button-group mt-2">
             <button class="btn">Subscribe &#8594;</button>
