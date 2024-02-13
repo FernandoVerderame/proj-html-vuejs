@@ -1,5 +1,6 @@
 <script>
-import MatchCard from "./MatchCard.vue"
+import MatchCard from "./MatchCard.vue";
+import GenericButton from "../generics/GenericButton.vue";
 
 export default {
     name: 'CurrentMatch',
@@ -49,7 +50,7 @@ export default {
             },
         ]
     }),
-    components: { MatchCard }
+    components: { MatchCard, GenericButton }
 };
 </script>
 
@@ -59,16 +60,8 @@ export default {
         <MatchCard :team1ID="calendar[0].team1ID" :team2ID="calendar[0].team2ID" :date="calendar[0].date"
             :stadium="calendar[0].stadium" />
         <!-- More details button -->
-        <button>View Match Detail</button>
+        <GenericButton buttonText="View Match Details" class="black" />
     </section>
 </template>
 
-<style lang="scss" scoped>
-button {
-    background-color: black;
-    color: white;
-    border-radius: 25px;
-    font-weight: 600;
-    padding: 1.2rem 3.6rem;
-}
-</style>
+<style lang="scss" scoped></style>
