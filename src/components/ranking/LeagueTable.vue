@@ -86,7 +86,14 @@ export default {
                 points: 20
             }
         ]
-    })
+    }),
+
+    computed: {
+        teamSrc() {
+            const url = new URL(`../../assets/img/${this.teams.logo}.png`, import.meta.url);
+            return url.href;
+        }
+    }
 };
 </script>
 
@@ -107,7 +114,7 @@ export default {
                 <tr v-for="team in teams" :key="team.id">
                     <td class="team">
                         <span class="ps-2">{{ team.id }}</span>
-                        <img :src="`../../assets/img/${team.logo}.png`" :alt="team.name">
+                        <img :src="`src/assets/img/${team.logo}.png`" :alt="team.name">
                         <span>{{ team.name }}</span>
                     </td>
                     <td>{{ team.win }}</td>
