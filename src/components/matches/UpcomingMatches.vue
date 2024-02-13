@@ -48,7 +48,6 @@ export default {
                 stadium: "Expert Stadium"
             },
         ],
-        // upcomingCalendar: []
     }),
     computed: {
         upcomingCalendar() {
