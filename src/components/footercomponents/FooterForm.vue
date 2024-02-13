@@ -12,7 +12,7 @@ export default {
 <template>
     <form @submit.prevent="$emit('submit-form', searchTerm)">
         <div class="input-group">
-            <input type="text" class="form-control" v-model="searchTerm" :placeholder="placeholder">
+            <input type="email" class="form-control" v-model="searchTerm" :placeholder="placeholder">
         </div>
         <div class="button-group mt-2">
             <button class="btn">Subscribe &#8594;</button>
