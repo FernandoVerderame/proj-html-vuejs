@@ -57,6 +57,7 @@ export default {
 
         img {
             border-radius: 20px;
+            transition: all 0.4s linear;
 
         }
     }
