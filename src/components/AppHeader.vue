@@ -37,7 +37,7 @@ export default {
     </header>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .container {
     padding-top: 15px;
     display: flex;

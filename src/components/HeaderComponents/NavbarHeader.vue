@@ -55,7 +55,7 @@ export default {
     </nav>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .header-links li {
     border-bottom: 2px solid transparent;
     transition: all 1s linear;
