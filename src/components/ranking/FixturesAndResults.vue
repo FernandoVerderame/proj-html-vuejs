@@ -164,6 +164,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .results {
     width: 100%;
 }
@@ -196,7 +198,7 @@ h2 {
 
 .matches .button-fixtures {
     color: white;
-    background-color: black;
+    background-color: $black;
     font-size: 18px;
     font-weight: 700;
     text-align: center;
@@ -204,10 +206,10 @@ h2 {
 }
 
 .even {
-    background-color: #F3F3F3;
+    background-color: $light-gray;
 }
 
 .odd {
-    background-color: #EBEBEB;
+    background-color: $gray;
 }
 </style>

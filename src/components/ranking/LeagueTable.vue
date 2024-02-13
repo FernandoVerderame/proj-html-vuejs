@@ -135,6 +135,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .league-table {
     width: 100%;
 }
@@ -150,7 +152,7 @@ thead {
         th {
             text-transform: uppercase;
             text-align: center;
-            background-color: black;
+            background-color: $black;
             color: white;
             font-size: 20px;
         }
@@ -162,7 +164,7 @@ tbody {
         font-size: 20px;
         text-align: center;
         vertical-align: middle;
-        background-color: #f5f5f5;
+        background-color: #F5F5F5;
 
         img {
             width: 60px;
@@ -178,7 +180,7 @@ tbody {
 tfoot {
     td {
         color: white;
-        background-color: black;
+        background-color: $black;
         font-size: 18px;
         font-weight: 700;
         text-align: center;
