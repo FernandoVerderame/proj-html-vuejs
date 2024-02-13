@@ -117,8 +117,12 @@ export default {
                     <td>4</td>
                     <td class="score">20</td>
                 </tr>
-
             </tbody>
+            <tfoot>
+                <tr>
+                    <td role="button" colspan="5">View Full League Table</td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </template>
@@ -161,6 +165,17 @@ tbody {
         &.score {
             font-weight: 700;
         }
+    }
+}
+
+tfoot {
+    td {
+        color: white;
+        background-color: black;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px 0;
     }
 }
 
