@@ -2,12 +2,15 @@
 export default {
     name: 'PlayerCard',
     props: {
-        players: Object
+        player: Object
     },
     computed: {
         playerSrc() {
-            const url = new URL(`../../assets/img/${this.players.src}`, import.meta.url);
+            const url = new URL(`../../assets/img/${this.player.src}`, import.meta.url);
             return url.href;
+        },
+        number() {
+            return this.player.shirtNumber < 10 ? this.player.shirtNumber = '0' + this.player.shirtNumber : this.player.shirtNumber
         }
     }
 }
@@ -16,10 +19,10 @@ export default {
 <template>
     <div class="player-card">
         <figure>
-            <img :src="playerSrc" :alt="players.name" class="img-fluid">
+            <img :src="playerSrc" :alt="player.name" class="img-fluid">
             <div class="player-info">
-                <h6>{{ players.shirtNumber }}</h6>
-                <p>{{ players.name }} - {{ players.role }}</p>
+                <h6>{{ number }}</h6>
+                <p>{{ player.name }} - {{ player.role }}</p>
             </div>
         </figure>
     </div>
