@@ -1,4 +1,5 @@
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 export default {
     name: 'AppFooter'
 };
@@ -24,15 +25,25 @@ export default {
                             <li></li>
                         </ul>
                     </div>
-                    <div class="social"></div>
+                    <div class="social">
+                        <a href="#">
+                            <FontAwesomeIcon icon="fa-brands fa-facebook-f" class="fa-2x" />
+                        </a>
+                        <a href="#">
+                            <FontAwesomeIcon icon="fa-brands fa-twitter" class="fa-2x" />
+                        </a>
+                        <a href="#">
+                            <FontAwesomeIcon icon="fa-brands fa-instagram" class="fa-2x" />
+                        </a>
+                    </div>
                 </div>
                 <div class="col">
                     <div class="news"></div>
                     <div class="form"></div>
                 </div>
-                <div class="col">
+                <div class="col footer-list">
                     <div class="education">
-                        <h4></h4>
+                        <h4>Education</h4>
                         <ul>
                             <li></li>
                             <li></li>
@@ -42,7 +53,7 @@ export default {
                         </ul>
                     </div>
                     <div class="links">
-                        <h4></h4>
+                        <h4>Quick Links</h4>
                         <ul>
                             <li></li>
                             <li></li>
@@ -63,6 +74,30 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.footer-list {
+    display: flex;
+    gap: 40px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+
+    a {
+        height: 40px;
+        width: 60px;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        transition: border .4s linear;
+
+        &:hover {
+            border: 1px solid transparent;
+        }
+    }
+}
+
 footer {
     background-image: url('../assets/img/footer-bg-football.jpg');
     color: #fff;
