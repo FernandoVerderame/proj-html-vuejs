@@ -4,12 +4,13 @@ export default {
     data: () => ({
         searchTerm: ''
     }),
-    props: { placeholder: String }
+    props: { placeholder: String },
+    emits: ['submit-form']
 }
 </script>
 
 <template>
-    <form>
+    <form @submit.prevent="$emit('submit-form', searchTerm)">
         <div class="input-group">
             <input type="text" class="form-control" v-model="searchTerm" :placeholder="placeholder">
         </div>
