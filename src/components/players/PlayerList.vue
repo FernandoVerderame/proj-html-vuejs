@@ -27,7 +27,7 @@ export default {
             </div>
             <div class="row">
                 <div class="col col-3 d-flex align-items-center" v-for="(player, i) in players" :key="i">
-                    <PlayerCard :players="player" />
+                    <PlayerCard :player="player" />
                 </div>
             </div>
             <div class="action text-center">
