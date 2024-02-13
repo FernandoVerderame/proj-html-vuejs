@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-    <div class="league-table border border-primary">
+    <div class="league-table">
         <h2>League Table</h2>
-        <table class="table">
+        <table class="table border border-light-subtl">
             <thead>
                 <tr>
                     <th class="team">Team</th>
@@ -20,7 +20,7 @@ export default {
             <tbody>
                 <tr>
                     <td class="team">
-                        <span>1</span>
+                        <span class="ps-2">1</span>
                         <img src="../../assets/img/league-club-1.png" alt="Instabul Sports">
                         <span>Instabul Sports</span>
                     </td>
@@ -31,7 +31,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>2</span>
+                        <span class="ps-2">2</span>
                         <img src="../../assets/img/league-club-2.png" alt="United Fs Club">
                         <span>United Fs Club</span>
                     </td>
@@ -42,7 +42,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>3</span>
+                        <span class="ps-2">3</span>
                         <img src="../../assets/img/league-club-3.png" alt="Schalke Club">
                         <span>Schalke Club</span>
                     </td>
@@ -53,7 +53,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>4</span>
+                        <span class="ps-2">4</span>
                         <img src="../../assets/img/league-club-4.png" alt="Inter Club">
                         <span>Inter Club</span>
                     </td>
@@ -64,7 +64,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>5</span>
+                        <span class="ps-2">5</span>
                         <img src="../../assets/img/league-club-5.png" alt="Madrid Club">
                         <span>Madrid Club</span>
                     </td>
@@ -75,7 +75,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>6</span>
+                        <span class="ps-2">6</span>
                         <img src="../../assets/img/league-club-6.png" alt="Schalke Club">
                         <span>Schalke Club</span>
                     </td>
@@ -86,7 +86,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>7</span>
+                        <span class="ps-2">7</span>
                         <img src="../../assets/img/league-club-7.png" alt="Arsenal Club">
                         <span>Arsenal Club</span>
                     </td>
@@ -97,7 +97,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>8</span>
+                        <span class="ps-2">8</span>
                         <img src="../../assets/img/league-club-8.png" alt="Bayern Club">
                         <span>Bayern Club</span>
                     </td>
@@ -108,7 +108,7 @@ export default {
                 </tr>
                 <tr>
                     <td class="team">
-                        <span>9</span>
+                        <span class="ps-2">9</span>
                         <img src="../../assets/img/league-club-9.png" alt="Atletico Club">
                         <span>Atletico Club</span>
                     </td>
