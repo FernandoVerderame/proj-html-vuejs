@@ -64,19 +64,6 @@ export default {
 </template>
 
 <style lang="scss">
-.teams {
-    font-size: x-large;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.details {
-    font-size: medium;
-    font-weight: 700;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
 button {
     background-color: black;
     color: white;

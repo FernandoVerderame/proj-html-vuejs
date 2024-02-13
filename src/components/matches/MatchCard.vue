@@ -67,21 +67,38 @@ export default {
 <template>
     <!-- Squadra 1 vs Squadra 2 -->
     <div class="teams d-flex justify-content-center align-items-center gap-3">
-        <div class="team1 d-flex align-items-center gap-2">
+        <span class="team1 d-flex align-items-center gap-2">
             {{ findTeamData(team1ID).name }}
             <img :src="`src/assets/img/${findTeamData(team1ID).logo}.png`" :alt="findTeamData(team1ID).name">
-        </div>
-        <div class="fs-1">VS</div>
-        <div class="team2 d-flex align-items-center gap-2">
+        </span>
+        <span class="vs">VS</span>
+        <span class="team2 d-flex align-items-center gap-2">
             <img :src="`src/assets/img/${findTeamData(team2ID).logo}.png`" :alt="team2ID">
             {{ findTeamData(team2ID).name }}
-        </div>
+        </span>
     </div>
     <!-- Data e Luogo -->
     <div class="details d-flex justify-content-center">
-        <div class="date">{{ date }}</div>
-        <div class="Stadium">{{ stadium }}</div>
+        <span class="date">{{ date }}</span>
+        <span class="Stadium">{{ stadium }}</span>
     </div>
 </template>
 
-<!-- <style lang="scss" scoped></style> -->
+<style lang="scss" scoped>
+.teams {
+    font-size: 28px;
+    font-weight: 700;
+    padding: 0.5rem;
+}
+
+.vs {
+    font-size: 65px;
+}
+
+.details {
+    font-size: medium;
+    font-weight: 700;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+</style>

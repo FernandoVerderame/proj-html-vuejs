@@ -51,7 +51,7 @@ export default {
         // upcomingCalendar: []
     }),
     computed: {
-        secondCalendar() {
+        upcomingCalendar() {
             return this.calendar.slice(1).reverse();
         }
     },
@@ -61,15 +61,41 @@ export default {
 
 <template>
     <!-- Match -->
-    <section class="upcoming-matches text-center container py-3">
-        <h2>Upcoming Matches</h2>
-        <MatchCard v-for="game in secondCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
-            :stadium="game.stadium" />
+    <section class="upcoming-matches text-center ">
+        <div class="container py-3">
+            <h2>Upcoming Matches</h2>
+            <MatchCard v-for="game in upcomingCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
+                :stadium="game.stadium" />
+        </div>
     </section>
 </template>
 
-<style lang="scss" scoped>
-.upcoming-matches * {
-    font-weight: 700;
+<style lang="scss">
+.upcoming-matches {
+    background-image: url(../../assets/img/saha.jpg);
+    background-position: center;
+    background-size: cover;
+
+    * {
+        color: white;
+    }
+
+    h2 {
+        font-weight: 700;
+        padding: 2rem;
+        margin: 0;
+    }
+
+    .teams {
+        background-color: rgba($color: #000000, $alpha: 0.2);
+    }
+
+    .vs {
+        font-size: 40px;
+    }
+
+    .details {
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
 }
 </style>
