@@ -2,9 +2,10 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import FooterList from './footercomponents/FooterList.vue';
 import FooterForm from './footercomponents/FooterForm.vue';
+import FooterInfo from './footercomponents/FooterInfo.vue';
 export default {
     name: 'AppFooter',
-    components: { FooterList, FooterForm },
+    components: { FooterList, FooterForm, FooterInfo },
     data: () => ({
         educationLinks: [
             {
