@@ -56,6 +56,12 @@ export default {
 </template>
 
 <style>
+.header-links li {
+    border-bottom: 2px solid transparent;
+    transition: all 1s linear;
+}
+
+
 .header-links li:hover {
     border-bottom: 2px solid white;
 }

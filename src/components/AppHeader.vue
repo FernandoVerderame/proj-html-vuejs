@@ -15,18 +15,21 @@ export default {
             <div class="container">
                 <!--HEADER SPONSOR-->
                 <div class="header-sponsor">
-                    <img src="../assets/img/sponsor1.png" alt="">
-                    <img src="../assets/img/sponsor2.png" alt="">
+                    <img role="button" src="../assets/img/sponsor1.png" alt="">
+                    <img role="button" src="../assets/img/sponsor2.png" alt="">
                 </div>
                 <!--LOGO IMAGE-->
                 <div class="logo">
-                    <img src="../assets/img/logo-football.png" alt="">
+                    <img role="button" src="../assets/img/logo-football.png" alt="">
                 </div>
                 <!--SOCIAL-LIST-->
                 <div class="soial-list">
-                    <span><font-awesome-icon class="text-white fa-2xl ms-5" :icon="['fab', 'facebook-f']" /></span>
-                    <span> <font-awesome-icon class="text-white fa-2xl ms-3" :icon="['fab', 'instagram']" /></span>
-                    <span><font-awesome-icon class="text-white fa-2xl ms-3" :icon="['fab', 'twitter']" /></span>
+                    <span role="button"><font-awesome-icon class="text-white fa-2xl ms-5"
+                            :icon="['fab', 'facebook-f']" /></span>
+                    <span role="button"> <font-awesome-icon class="text-white fa-2xl ms-3"
+                            :icon="['fab', 'instagram']" /></span>
+                    <span role="button"><font-awesome-icon class="text-white fa-2xl ms-3"
+                            :icon="['fab', 'twitter']" /></span>
                 </div>
             </div>
             <NavbarHeader />
