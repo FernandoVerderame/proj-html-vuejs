@@ -2,11 +2,12 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import LinkList from './footercomponents/LinkList.vue';
 import FooterInfo from './footercomponents/FooterInfo.vue';
-import FooterNews from './footercomponents/FooterNews.vue'
+import FooterNews from './footercomponents/FooterNews.vue';
+import FooterList from './footercomponents/FooterList.vue';
 
 export default {
     name: 'AppFooter',
-    components: { LinkList, FooterInfo, FooterNews },
+    components: { LinkList, FooterInfo, FooterNews, FooterList },
     data: () => ({
         educationLinks: [
             {
