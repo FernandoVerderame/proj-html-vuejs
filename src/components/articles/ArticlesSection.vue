@@ -1,6 +1,47 @@
 <script>
+import ArticlesCard from './ArticlesCard.vue';
 export default {
-    name: 'ArticlesSection'
+    name: 'ArticlesSection',
+    data: () => ({
+        articles: [
+            {
+                id: 1,
+                image: 'news1-1-150x150.png',
+                date: '29.05.2022 - Football',
+                title: 'What is Football?',
+                text: 'Football is a sport that is known as a ball game and is loved by [...]'
+            },
+            {
+                id: 2,
+                image: 'news2-1-150x150.png',
+                date: '29.05.2022 - Football',
+                title: 'Football Rules',
+                text: 'GOLDEN GOAL: In a football match, the goal scored by one of the teams in [...]'
+            },
+            {
+                id: 3,
+                image: 'news3-1-150x150.png',
+                date: '29.05.2022 - Football',
+                title: 'Football Features',
+                text: 'Football: It is an aerobic-based anaerobic sport in which jumps, kicks, turns, running with changing [...]'
+            },
+            {
+                id: 4,
+                image: 'news4-1-150x150.png',
+                date: '29.05.2022 - Football',
+                title: 'Football Terms',
+                text: 'GOLDEN GOAL: In a football match, the goal scored by one of the teams in [...]'
+            },
+            {
+                id: 5,
+                image: 'news6-1-150x150.png',
+                date: '29.05.2022 - Football',
+                title: 'How many football players are there in the world?',
+                text: 'According to this report, there are more than 301 thousand football clubs, over 1.752 million [...]'
+            },
+        ]
+    }),
+    components: { ArticlesCard }
 };
 </script>
 
@@ -13,79 +54,10 @@ export default {
         </div>
         <div id="carousel">
             <div class="row gx-2">
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../../assets/img/news1-1-150x150.png" class="card-img-top" alt="...">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <div class="card-body">
-                            <h5 class="card-title">What is Football?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the
-                                card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../../assets/img/news1-1-150x150.png" class="card-img-top" alt="...">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <div class="card-body">
-                            <h5 class="card-title">What is Football?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the
-                                card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../../assets/img/news1-1-150x150.png" class="card-img-top" alt="...">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <div class="card-body">
-                            <h5 class="card-title">What is Football?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the
-                                card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../../assets/img/news1-1-150x150.png" class="card-img-top" alt="...">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <div class="card-body">
-                            <h5 class="card-title">What is Football?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the
-                                card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../../assets/img/news1-1-150x150.png" class="card-img-top" alt="...">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <div class="card-body">
-                            <h5 class="card-title">What is Football?</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the
-                                card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                <div class="col col-3" v-for="article in articles" :key="article.id">
+                    <ArticlesCard :article="article" />
 
-
-
+                </div>
             </div>
         </div>
     </div>
@@ -95,7 +67,6 @@ export default {
 #carousel {
     background-color: black;
     height: 500px;
-    overflow: hidden;
 }
 
 .col {
