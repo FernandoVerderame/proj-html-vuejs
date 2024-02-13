@@ -48,10 +48,10 @@ export default {
     <footer>
 
         <!-- Footer Top -->
-        <div class="footer-top container py-4">
+        <div class="footer-top container py-5">
             <div class="row">
                 <div class="col col-3">
-                    <div class="logo my-4">
+                    <div class="logo mb-4">
                         <figure>
                             <img src="../assets/img/logo-footer-football.png" alt="Logo">
                         </figure>
@@ -95,13 +95,13 @@ export default {
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
-                            <FooterList v-for="(link, i) in educationLinks" :key="i" />
+                            <FooterList v-for="(link, i) in educationLinks" :key="i" :link="link" />
                         </ul>
                     </div>
                     <div class="links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <FooterList v-for="(link, i) in quickLinks" :key="i" />
+                            <FooterList v-for="(link, i) in quickLinks" :key="i" :link="link" />
                         </ul>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ export default {
 <style lang="scss" scoped>
 .footer-list {
     display: flex;
-    gap: 40px;
+    gap: 60px;
 }
 
 .info {
@@ -131,6 +131,19 @@ export default {
 .logo {
     img {
         height: 75px;
+    }
+}
+
+.footer-list {
+
+    h4 {
+        margin-bottom: 20px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    ul {
+        padding: 0;
     }
 }
 
