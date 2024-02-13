@@ -2,7 +2,8 @@
 import FooterForm from './FooterForm.vue';
 export default {
     name: 'FooterNews',
-    components: { FooterForm }
+    components: { FooterForm },
+    emits: ['submit-form']
 }
 </script>
 
@@ -16,7 +17,7 @@ export default {
             <div class="news-form"></div>
         </div>
         <div class="form">
-            <FooterForm placeholder="Your Email Addres" @submit-form="sendForm" />
+            <FooterForm placeholder="Your Email Addres" @submit-form="$emit('submit-form', $event)" />
         </div>
     </div>
 </template>
