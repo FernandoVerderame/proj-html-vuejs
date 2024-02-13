@@ -19,6 +19,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+#ranking {
+    padding: 60px 0;
+}
+
 .container {
     gap: 50px;
 }
