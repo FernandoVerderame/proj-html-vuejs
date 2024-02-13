@@ -38,9 +38,10 @@ export default {
         border: 2px solid $white;
         padding: 12px;
         border-radius: 30px;
+        transition: transform 0.5s;
 
         &:hover {
-            transition: all 0.3s ease-in-out 0s;
+            transform: translateY(-5px);
         }
     }
 }
