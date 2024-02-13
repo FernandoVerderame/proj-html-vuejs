@@ -10,8 +10,12 @@ export default {
 </script>
 
 <template>
-    <LeagueTable />
-    <FixturesAndResults />
+    <section id="ranking">
+        <div class="container">
+            <LeagueTable />
+            <FixturesAndResults />
+        </div>
+    </section>
 </template>
 
 <style></style>
