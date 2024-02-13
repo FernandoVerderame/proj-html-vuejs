@@ -48,11 +48,11 @@ export default {
                 stadium: "Expert Stadium"
             },
         ],
-        upcomingCalendar: []
+        // upcomingCalendar: []
     }),
     computed: {
         secondCalendar() {
-            return this.upcomingCalendar = this.calendar.shift()
+            return this.calendar.slice(1).reverse();
         }
     },
     components: { MatchCard }
@@ -63,7 +63,7 @@ export default {
     <!-- Match -->
     <section class="upcoming-matches text-center container py-3">
         <h2>Upcoming Matches</h2>
-        <MatchCard v-for="game in upcomingCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
+        <MatchCard v-for="game in secondCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
             :stadium="game.stadium" />
     </section>
 </template>
