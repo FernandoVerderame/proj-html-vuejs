@@ -40,7 +40,13 @@ export default {
                 text: 'contact',
                 url: '#'
             }]
-    })
+    }),
+    methods: {
+        sendForm(term) {
+            const email = 'La tua email è: '
+            console.log(email + term)
+        }
+    }
 };
 </script>
 
@@ -91,7 +97,7 @@ export default {
                         <div class="news-form"></div>
                     </div>
                     <div class="form">
-                        <FooterForm placeholder="Your Email Addres" />
+                        <FooterForm placeholder="Your Email Addres" @submit-form="sendForm" />
                     </div>
                 </div>
                 <div class="col col-4 offset-1 footer-list">
