@@ -35,10 +35,25 @@ export default {
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
+    overflow: hidden;
+    padding-bottom: 50px;
+
+
+    &:hover img {
+        scale: 1.05;
+    }
+
+    &:hover .player-info {
+        scale: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateY(-35%);
+    }
 
 
     figure {
-        overflow: hidden;
+        // overflow: hidden;
 
         img {
             border-radius: 20px;
@@ -52,7 +67,9 @@ export default {
         left: 0;
         right: 0;
         bottom: 0;
+        transform: translateY(-40%);
         background-color: #000;
+        transition: all 0.4s linear;
 
         border-radius: 20px;
 
