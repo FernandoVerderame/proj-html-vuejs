@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import FooterList from './footercomponents/FooterList.vue';
 import FooterInfo from './footercomponents/FooterInfo.vue';
 import FooterNews from './footercomponents/FooterNews.vue'
-import FooterForm from './footercomponents/FooterForm.vue';
+
 export default {
     name: 'AppFooter',
-    components: { FooterList, FooterForm, FooterInfo, FooterNews },
+    components: { FooterList, FooterInfo, FooterNews },
     data: () => ({
         educationLinks: [
             {
@@ -60,18 +60,7 @@ export default {
         <div class="footer-top container py-5">
             <div class="row">
                 <FooterInfo />
-                <div class="col col-4">
-                    <div class="news">
-                        <div class="news-text">
-                            <h3>Join Our Newsletter</h3>
-                            <p>Subscribe to be informed about important developments in our club and football world.</p>
-                        </div>
-                        <div class="news-form"></div>
-                    </div>
-                    <div class="form">
-                        <FooterForm placeholder="Your Email Addres" @submit-form="sendForm" />
-                    </div>
-                </div>
+                <FooterNews />
                 <div class="col col-4 offset-1 footer-list">
                     <div class="education">
                         <h4>Education</h4>
