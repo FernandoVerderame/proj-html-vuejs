@@ -63,7 +63,7 @@ export default {
     </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 button {
     background-color: black;
     color: white;
