@@ -93,21 +93,11 @@ export default {
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
                         </ul>
                     </div>
                     <div class="links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
                         </ul>
                     </div>
                 </div>
