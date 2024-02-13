@@ -131,6 +131,7 @@ export default {
 h2 {
     text-align: center;
     font-weight: 700;
+    margin-bottom: 40px;
 }
 
 thead {
