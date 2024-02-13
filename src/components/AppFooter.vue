@@ -1,7 +1,9 @@
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import FooterList from './footercomponents/FooterList.vue';
 export default {
     name: 'AppFooter',
+    components: { FooterList },
     data: () => ({
         educationLinks: [
             {
@@ -93,11 +95,13 @@ export default {
                     <div class="education">
                         <h4>Education</h4>
                         <ul>
+                            <FooterList />
                         </ul>
                     </div>
                     <div class="links">
                         <h4>Quick Links</h4>
                         <ul>
+                            <FooterList />
                         </ul>
                     </div>
                 </div>
