@@ -7,7 +7,7 @@ import { store } from "../../assets/data/store.js";
 export default {
     name: 'PlayerList',
     data: () => ({
-        store,
+        players: store.players,
     }),
     components: { PlayerCard, GenericButton }
 };
@@ -21,7 +21,7 @@ export default {
                 <h3>Players</h3>
             </div>
             <div class="row">
-                <div class="col col-3 d-flex align-items-center" v-for="player in store.players" :key="player.id">
+                <div class="col col-3 d-flex align-items-center" v-for="player in players" :key="player.id">
                     <PlayerCard :player="player" />
                 </div>
             </div>
