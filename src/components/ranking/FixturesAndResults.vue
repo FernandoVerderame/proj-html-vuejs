@@ -9,8 +9,14 @@ export default {
     props: {
         teams: Array,
         baseCalendar: Array
+    },
+
+    methods: {
+        findTeamData(id) {
+            return this.teams.find(team => team.id === id)
+        }
     }
-};
+}
 </script>
 
 <template>
@@ -18,7 +24,9 @@ export default {
     <div class="results">
         <h2>Fixtures & Results</h2>
         <div class="matches">
-            <ResultCard v-for="(match, i) in baseCalendar" :key="match.id" :match="match" :teams="teams" :i="i" />
+            <ResultCard v-for="(match, i) in baseCalendar" :key="match.id" :match="match"
+                :team1="findTeamData(match.team1ID)" :team2="findTeamData(match.team2ID)"
+                :class="{ even: i % 2 === 0, odd: i % 2 !== 0 }" />
 
             <!-- Show matches button -->
             <div role="button" class="button-fixtures">View Full Fixtures</div>

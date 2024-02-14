@@ -4,30 +4,30 @@ export default {
 
     props: {
         match: Object,
-        i: Number,
-        teams: Array
+        team1: Object,
+        team2: Object
     },
 
     methods: {
-        findTeamData(id) {
-            return this.teams.find(team => team.id === id)
+        teamLogo(image) {
+            const url = new URL(`../../assets/img/${image}.png`, import.meta.url);
+            return url.href;
         }
     }
-};
+}
 </script>
 
 <template>
-    <div :class="{ even: i % 2 === 0, odd: i % 2 !== 0 }"
-        class="card-match d-flex justify-content-center align-items-center">
+    <div class="card-match d-flex justify-content-center align-items-center">
 
         <!-- Home team -->
-        <img :src="`src/assets/img/${findTeamData(match.team1ID).logo}.png`" :alt="findTeamData(match.team1ID).name">
-        <div class="team-name">{{ findTeamData(match.team1ID).name }}</div>
+        <img :src="teamLogo(team1.logo)" :alt="team1.name">
+        <div class="team-name">{{ team1.name }}</div>
         <div class="versus">vs</div>
 
         <!-- Away team -->
-        <div class="team-name">{{ findTeamData(match.team2ID).name }}</div>
-        <img :src="`src/assets/img/${findTeamData(match.team2ID).logo}.png`" :alt="findTeamData(match.team2ID).name">
+        <div class="team-name">{{ team2.name }}</div>
+        <img :src="teamLogo(team2.logo)" :alt="team2.name">
     </div>
 </template>
 
