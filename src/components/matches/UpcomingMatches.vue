@@ -21,8 +21,8 @@ export default {
     <section class="upcoming-matches text-center ">
         <div class="container py-3">
             <h2>Upcoming Matches</h2>
-            <MatchCard v-for="game in upcomingCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
-                :stadium="game.stadium" />
+            <!-- <MatchCard v-for="game in upcomingCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
+                :stadium="game.stadium" /> -->
         </div>
     </section>
 </template>

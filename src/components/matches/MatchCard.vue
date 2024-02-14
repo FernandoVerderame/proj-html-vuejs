@@ -50,14 +50,9 @@ export default {
             },
         ],
     }),
-    methods: {
-        findTeamData(id) {
-            return this.teams.find(team => team.id == id)
-        }
-    },
     props: {
-        team1ID: Number,
-        team2ID: Number,
+        team1: Object,
+        team2: Object,
         date: String,
         stadium: String,
     }
@@ -68,13 +63,13 @@ export default {
     <!-- Squadra 1 vs Squadra 2 -->
     <div class="teams d-flex justify-content-center align-items-center gap-3">
         <span class="team1 d-flex align-items-center gap-2">
-            {{ findTeamData(team1ID).name }}
-            <img :src="`src/assets/img/${findTeamData(team1ID).logo}.png`" :alt="findTeamData(team1ID).name">
+            {{ team1.name }}
+            <img :src="`src/assets/img/${team1.logo}.png`" :alt="team1.name">
         </span>
         <span class="vs">VS</span>
         <span class="team2 d-flex align-items-center gap-2">
-            <img :src="`src/assets/img/${findTeamData(team2ID).logo}.png`" :alt="team2ID">
-            {{ findTeamData(team2ID).name }}
+            <img :src="`src/assets/img/${team2.logo}.png`" :alt="team2.name">
+            {{ team2.name }}
         </span>
     </div>
     <!-- Data e Luogo -->
