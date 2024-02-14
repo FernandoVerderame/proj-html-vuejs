@@ -14,12 +14,15 @@ export default {
         <div class="info my-4">
             <ul>
                 <li>
+                    <FontAwesomeIcon icon="fa-solid fa-location-dot" class="fa-2x" />
                     <p>New Jersey, USA</p>
                 </li>
                 <li>
+                    <FontAwesomeIcon icon="fa-solid fa-phone-volume" class="fa-2x" />
                     <p>+1 (234) 567 89 10</p>
                 </li>
                 <li>
+                    <FontAwesomeIcon icon="fa-solid fa-envelope" class="fa-2x" />
                     <p>example@example.com</p>
                 </li>
             </ul>
@@ -43,6 +46,12 @@ export default {
     ul {
         list-style-type: none;
         padding: 0;
+    }
+
+    li {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
     }
 
     p {
