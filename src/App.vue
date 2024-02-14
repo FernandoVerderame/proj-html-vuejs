@@ -16,4 +16,18 @@ export default {
   <AppFooter />
 </template>
 
-<style></style>
+<style lang="scss">
+@use './assets/scss/vars' as *;
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: $white;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: $black;
+}
+</style>
