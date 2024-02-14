@@ -3,34 +3,8 @@ import JumbotronFigure from './JumbotronFigure.vue'
 export default {
     name: 'JumbotronHeader',
     components: { JumbotronFigure, },
+    props: { slider: Array },
     data: () => ({
-        slider: [
-            {
-                id: 1,
-                image: 'slider1-1.jpg',
-                primaryText: 'Welcome To Football Club',
-                description: 'Live match fix types and results'
-            },
-            {
-                id: 2,
-                image: 'slider2-1.jpg',
-                primaryText: 'Football Club Sport Club',
-                description: 'Football is a head game'
-            },
-            {
-                id: 3,
-                image: 'slider3.jpg',
-                primaryText: 'Professional Football Football Club',
-                description: 'Football is the poetry of movement'
-            },
-            {
-                id: 4,
-                image: 'slider4.jpg',
-                primaryText: 'Football Club Sport Club',
-                description: 'Football is a head game'
-            },
-
-        ],
         currentIndex: 0,
         intervall: null,
     }),

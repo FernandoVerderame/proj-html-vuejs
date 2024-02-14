@@ -21,7 +21,7 @@ export default {
                 <h3>Players</h3>
             </div>
             <div class="row">
-                <div class="col col-3 d-flex align-items-center" v-for="(player, i) in store.players" :key="i">
+                <div class="col col-3 d-flex align-items-center" v-for="player in store.players" :key="player.id">
                     <PlayerCard :player="player" />
                 </div>
             </div>

@@ -1,15 +1,22 @@
 <script>
 import JumbotronHeader from './HeaderComponents/JumbotronHeader.vue';
 import NavbarHeader from './HeaderComponents/NavbarHeader.vue';
+import { store } from '../assets/data/store'
 
 export default {
     name: 'AppHeader',
+    data: () => ({
+        headerLinks: store.headerLinks,
+        slider: store.slider,
+
+    }),
     components: { NavbarHeader, JumbotronHeader }
+
 };
 </script>
 
 <template>
-    <JumbotronHeader />
+    <JumbotronHeader :slider="slider" />
     <header>
         <div class="header-container">
             <div class="container">
@@ -32,7 +39,7 @@ export default {
                             :icon="['fab', 'twitter']" /></span>
                 </div>
             </div>
-            <NavbarHeader />
+            <NavbarHeader :headerLinks="headerLinks" />
         </div>
     </header>
 </template>

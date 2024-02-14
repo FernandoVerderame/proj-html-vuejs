@@ -1,45 +1,7 @@
 <script>
 export default {
     name: 'NavbarHeader',
-    data: () => ({
-        headerLinks: [
-            {
-                text: 'Home',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Fixtures & results',
-                url: '#',
-                current: true,
-            },
-            {
-                text: 'league table',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'players',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'gallery',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'blog',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'contact',
-                url: '#',
-                current: false,
-            },
-        ]
-    })
+    props: { headerLinks: Array }
 }
 
 </script>
@@ -48,7 +10,7 @@ export default {
     <nav class="d-flex align-items-center justify-content-center mt-4">
         <!--HEADER'S LINKS-->
         <ul class="header-links d-flex align-items-cente gap-5 list-unstyled">
-            <li class="text-white fw-bold" v-for="(link, i) in headerLinks" :key="i">
+            <li class="text-white fw-bold" v-for="link in headerLinks" :key="link.id">
                 <a href="#" class="text-decoration-none text-white">{{ link.text.toUpperCase() }}</a>
             </li>
         </ul>
