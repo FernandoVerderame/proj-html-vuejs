@@ -1,9 +1,8 @@
 <script>
 import JumbotronFigure from './JumbotronFigure.vue'
-import GenericButton from '../generics/GenericButton.vue'
 export default {
     name: 'JumbotronHeader',
-    components: { JumbotronFigure, GenericButton },
+    components: { JumbotronFigure, },
     data: () => ({
         slider: [
             {
@@ -56,11 +55,6 @@ export default {
                 this.currentIndex--
             }
         },
-
-        createImagePath(image) {
-            const url = new URL(`../../assets/img/${image}`, import.meta.url);
-            return url.href
-        }
     }
 }
 
@@ -68,15 +62,8 @@ export default {
 
 <template>
     <div class="jumbotron">
-        <figure v-for="(slide, i) in slider" :key="i" :class="{ active: i === currentIndex }">
-            <img class="jumbotron-img" :src="createImagePath(slide.image)" alt="">
-            <div class="jumbotron-text text-center lh-sm container-jumbotron">
-                <p class="big-text">{{ slide.primaryText }}</p>
-                <p class="fw-bold">{{ slide.description }}</p>
-                <!-- <button class="mt-3">Learn More</button> -->
-                <GenericButton buttonText="Learn More &#8594;" class="transparent mt-4" />
-            </div>
-        </figure>
+        <JumbotronFigure v-for="(slide, i) in slider" :key="slide.id" :slide="slide"
+            :class="{ active: i === currentIndex }" />
         <div class="round button-slider prev" role="button" @click="goPrevIndex">
             <FontAwesomeIcon :icon="['fas', 'chevron-left']" />
         </div>
@@ -90,29 +77,6 @@ export default {
 .jumbotron {
     position: relative;
     height: 900px;
-
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-.jumbotron-text {
-    position: absolute;
-    bottom: 30px;
-    color: white;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.big-text {
-    font-size: 5rem;
-    font-weight: bold;
-}
-
-p {
-    margin: 0;
 }
 
 .button-slider {
@@ -135,11 +99,6 @@ p {
 
 .container-jumbotron {
     width: 40%;
-}
-
-figure {
-    height: 100%;
-    display: none;
 }
 
 figure.active {
