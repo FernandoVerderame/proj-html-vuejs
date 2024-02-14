@@ -205,7 +205,7 @@ export const store = reactive({
     }, {
         name: 'Ethan Smith', role: 'Midfielder', shirtNumber: 15, src: 'player4.jpg'
     }],
-    // ranking data
+    // ! ranking data --> ho cambiato il nome da Calendar a baseCalendar
     baseCalendar: [
         {
             id: 1,
