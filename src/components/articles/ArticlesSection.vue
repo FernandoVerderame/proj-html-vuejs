@@ -39,9 +39,18 @@ export default {
                 title: 'How many football players are there in the world?',
                 text: 'According to this report, there are more than 301 thousand football clubs, over 1.752 million [...]'
             },
-        ]
+        ],
+
+        activeIndex: 0,
     }),
-    components: { ArticlesCard }
+    computed: {
+        visibleCard() {
+            const visibleCards = [...this.articles]
+            return visibleCards
+        }
+    },
+    components: { ArticlesCard },
+
 };
 </script>
 
@@ -54,10 +63,15 @@ export default {
         </div>
         <div id="carousel">
             <div class="row gx-2">
-                <div class="col col-3" v-for="article in articles" :key="article.id">
+                <div class="col col-3" v-for="article in articles" :key="article.id"
+                    :class="{ disabled: article.id === activeIndex + 5 }">
                     <ArticlesCard :article="article" />
-
                 </div>
+            </div>
+            <div class="button-container">
+                <div class="carousel-button" v-for="n in 4" :key="n" role="button" :class="{ active: n === activeIndex }"
+                    @click="activeIndex = n"></div>
+
             </div>
         </div>
     </div>
@@ -65,14 +79,13 @@ export default {
 
 <style lang="scss" scoped>
 #carousel {
-    background-color: black;
-    height: 500px;
+    // background-color: black;
+    // height: 600px;
     overflow: hidden;
 }
 
 .col {
     height: 100%;
-    background-color: aquamarine;
 }
 
 .card {
@@ -88,5 +101,31 @@ export default {
 .flat-icon {
     width: 100px;
     height: 100px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    gap: 5px;
+}
+
+.carousel-button {
+    height: 5px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #ebebeb;
+}
+
+.carousel-button.active {
+    width: 70px;
+    background-color: black;
+    transition: all 0.5s linear;
+}
+
+.disabled {
+    display: none;
 }
 </style>
