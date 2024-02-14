@@ -75,7 +75,9 @@ export default {
 
         <!-- Footer Bottom -->
         <div class="footer-bottom text-center py-4">
-            <p class="mb-0">2022 Football Club - All Rights Reserved.</p>
+            <p class="mb-0">
+                <FontAwesomeIcon icon="fa-regular fa-copyright" class="me-2" />2022 Football Club - All Rights Reserved.
+            </p>
         </div>
     </footer>
 </template>
