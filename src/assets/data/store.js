@@ -4,36 +4,43 @@ export const store = reactive({
     // * header data
     headerLinks: [
         {
+            id: 1,
             text: 'Home',
             url: '#',
             current: false,
         },
         {
+            id: 2,
             text: 'Fixtures & results',
             url: '#',
             current: true,
         },
         {
+            id: 3,
             text: 'league table',
             url: '#',
             current: false,
         },
         {
+            id: 4,
             text: 'players',
             url: '#',
             current: false,
         },
         {
+            id: 5,
             text: 'gallery',
             url: '#',
             current: false,
         },
         {
+            id: 6,
             text: 'blog',
             url: '#',
             current: false,
         },
         {
+            id: 7,
             text: 'contact',
             url: '#',
             current: false,
@@ -197,13 +204,13 @@ export const store = reactive({
     ],
     // players data
     players: [{
-        name: 'Adam Brown', role: 'Forwarder', shirtNumber: 7, src: 'player1.jpg'
+        name: 'Adam Brown', role: 'Forwarder', shirtNumber: 7, src: 'player1.jpg', id: 1,
     }, {
-        name: 'Michael Kayn', role: 'Forwarder', shirtNumber: 9, src: 'player2.jpg'
+        name: 'Michael Kayn', role: 'Forwarder', shirtNumber: 9, src: 'player2.jpg', id: 2,
     }, {
-        name: 'Micheal Lee', role: 'Forwarder', shirtNumber: 11, src: 'player3.jpg'
+        name: 'Micheal Lee', role: 'Forwarder', shirtNumber: 11, src: 'player3.jpg', id: 3,
     }, {
-        name: 'Ethan Smith', role: 'Midfielder', shirtNumber: 15, src: 'player4.jpg'
+        name: 'Ethan Smith', role: 'Midfielder', shirtNumber: 15, src: 'player4.jpg', id: 4,
     }],
     // ranking data
     baseCalendar: [
