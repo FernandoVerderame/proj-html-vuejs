@@ -13,14 +13,14 @@ export default {
             },
             {
                 id: 2,
-                image: 'news2-1-150x150.png',
+                image: 'news3-1-150x150.png',
                 date: '29.05.2022 - Football',
                 title: 'Football Rules',
                 text: 'GOLDEN GOAL: In a football match, the goal scored by one of the teams in [...]'
             },
             {
                 id: 3,
-                image: 'news3-1-150x150.png',
+                image: 'news2-1-150x150.png',
                 date: '29.05.2022 - Football',
                 title: 'Football Features',
                 text: 'Football: It is an aerobic-based anaerobic sport in which jumps, kicks, turns, running with changing [...]'
@@ -41,14 +41,37 @@ export default {
             },
         ],
 
-        activeIndex: 0,
+        activeIndex: 1,
     }),
     computed: {
         visibleCard() {
             const visibleCards = [...this.articles]
+            switch (this.activeIndex) {
+                case 2:
+                    visibleCards.shift();
+                    break;
+                case 3:
+                    visibleCards.shift();
+                    visibleCards.shift();
+                    visibleCards.push(this.articles[0]);
+                    break;
+                case 4:
+                    visibleCards.shift();
+                    visibleCards.shift();
+                    visibleCards.shift();
+                    visibleCards.push(this.articles[0]);
+                    visibleCards.splice(3, 1, this.articles[1])
+                    break;
+                default:
+                    visibleCards.pop();
+            }
             return visibleCards
         }
+
+
+
     },
+
     components: { ArticlesCard },
 
 };
@@ -63,15 +86,13 @@ export default {
         </div>
         <div id="carousel">
             <div class="row gx-2">
-                <div class="col col-3" v-for="article in articles" :key="article.id"
-                    :class="{ disabled: article.id === activeIndex + 5 }">
+                <div class="col col-3" v-for="article in visibleCard" :key="article.id">
                     <ArticlesCard :article="article" />
                 </div>
             </div>
             <div class="button-container">
                 <div class="carousel-button" v-for="n in 4" :key="n" role="button" :class="{ active: n === activeIndex }"
                     @click="activeIndex = n"></div>
-
             </div>
         </div>
     </div>
