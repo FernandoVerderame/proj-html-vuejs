@@ -5,16 +5,17 @@ import MatchCard from "./MatchCard.vue";
 export default {
     name: 'Upcoming Matches',
     data: () => ({
-        store,
+        spotlightCalendar: store.spotlightCalendar,
+        teams: store.teams
     }),
     computed: {
         upcomingCalendar() {
-            return store.spotlightCalendar.slice(1).reverse();
+            return this.spotlightCalendar.slice(1).reverse();
         }
     },
     methods: {
         findTeamData(id) {
-            return store.teams.find(team => team.id == id)
+            return this.teams.find(team => team.id == id)
         }
     },
     components: { MatchCard }
