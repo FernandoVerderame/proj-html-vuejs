@@ -6,17 +6,18 @@ import GenericButton from "../generics/GenericButton.vue";
 export default {
     name: 'CurrentMatch',
     data: () => ({
-        store,
+        spotlightCalendar: store.spotlightCalendar,
+        teams: store.teams
     }),
     components: { MatchCard, GenericButton },
     computed: {
         currentMatch() {
-            return store.spotlightCalendar[0];
+            return this.spotlightCalendar[0];
         }
     },
     methods: {
         findTeamData(id) {
-            return store.teams.find(team => team.id == id)
+            return this.teams.find(team => team.id == id)
         }
     }
 };
