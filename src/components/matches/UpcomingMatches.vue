@@ -12,6 +12,11 @@ export default {
             return store.spotlightCalendar.slice(1).reverse();
         }
     },
+    methods: {
+        findTeamData(id) {
+            return store.teams.find(team => team.id == id)
+        }
+    },
     components: { MatchCard }
 };
 </script>
@@ -21,8 +26,8 @@ export default {
     <section class="upcoming-matches text-center ">
         <div class="container py-3">
             <h2>Upcoming Matches</h2>
-            <!-- <MatchCard v-for="game in upcomingCalendar" :team1ID="game.team1ID" :team2ID="game.team2ID" :date="game.date"
-                :stadium="game.stadium" /> -->
+            <MatchCard v-for="game in upcomingCalendar" :team1="findTeamData(game.team1ID)"
+                :team2="findTeamData(game.team2ID)" :date="game.date" :stadium="game.stadium" />
         </div>
     </section>
 </template>

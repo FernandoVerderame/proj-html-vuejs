@@ -1,55 +1,6 @@
 <script>
 export default {
     name: 'MatchCard',
-    data: () => ({
-        teams: [
-            {
-                id: 1,
-                name: "Istanbul Sports",
-                logo: "league-club-1"
-            },
-            {
-                id: 2,
-                name: "United Fs Club",
-                logo: "league-club-2"
-            },
-            {
-                id: 3,
-                name: "Schalke Club",
-                logo: "league-club-3"
-            },
-            {
-                id: 4,
-                name: "Inter Club",
-                logo: "league-club-4"
-            },
-            {
-                id: 5,
-                name: "Madrid Club",
-                logo: "league-club-5"
-            },
-            {
-                id: 6,
-                name: "Schalke Club",
-                logo: "league-club-6"
-            },
-            {
-                id: 7,
-                name: "Arsenal Club",
-                logo: "league-club-7"
-            },
-            {
-                id: 8,
-                name: "Bayern Club",
-                logo: "league-club-8"
-            },
-            {
-                id: 9,
-                name: "Atletico Club",
-                logo: "league-club-9"
-            },
-        ],
-    }),
     props: {
         team1: Object,
         team2: Object,
