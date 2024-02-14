@@ -20,7 +20,7 @@ export default {
     <section id="ranking">
         <div class="container">
             <div class="d-flex gap-5">
-                <LeagueTable />
+                <LeagueTable :teams="teams" />
                 <FixturesAndResults />
             </div>
 
