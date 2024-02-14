@@ -5,13 +5,13 @@ import { store } from "../../assets/data/store.js";
 export default {
     name: 'ArticlesSection',
     data: () => ({
-        store,
+        articles: store.articles,
         activeIndex: 1,
         interval: null,
     }),
     computed: {
         visibleCard() {
-            const visibleCards = [...store.articles]
+            const visibleCards = [...this.articles]
             switch (this.activeIndex) {
                 case 2:
                     visibleCards.shift();
@@ -19,14 +19,14 @@ export default {
                 case 3:
                     visibleCards.shift();
                     visibleCards.shift();
-                    visibleCards.push(store.articles[0]);
+                    visibleCards.push(this.articles[0]);
                     break;
                 case 4:
                     visibleCards.shift();
                     visibleCards.shift();
                     visibleCards.shift();
-                    visibleCards.push(store.articles[0]);
-                    visibleCards.splice(3, 1, store.articles[1])
+                    visibleCards.push(this.articles[0]);
+                    visibleCards.splice(3, 1, this.articles[1])
                     break;
                 default:
                     visibleCards.pop();
