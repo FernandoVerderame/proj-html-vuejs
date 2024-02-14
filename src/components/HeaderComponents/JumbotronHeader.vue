@@ -32,6 +32,7 @@ export default {
 
         ],
         currentIndex: 0,
+        intervall: null,
     }),
 
     computed: {
@@ -45,7 +46,15 @@ export default {
             if (this.currentIndex === this.lastIndex) this.currentIndex = 0
             else {
                 this.currentIndex++
-            }
+            };
+            clearInterval(this.intervall);
+            this.autoPlay()
+        },
+
+        autoPlay() {
+            this.intervall = setInterval(() => {
+                this.goNextIndex()
+            }, 2000)
         },
 
         goPrevIndex() {
@@ -53,8 +62,14 @@ export default {
                 this.currentIndex = this.lastIndex
             } else {
                 this.currentIndex--
-            }
+            };
+            clearInterval(this.intervall);
+            this.autoPlay()
         },
+    },
+
+    created() {
+        this.autoPlay()
     }
 }
 
