@@ -6,6 +6,12 @@ export default {
         team2: Object,
         date: String,
         stadium: String,
+    },
+    methods: {
+        createImagePath(imgName) {
+            const url = new URL(`../../assets/img/${imgName}.png`, import.meta.url);
+            return url.href
+        }
     }
 };
 </script>
@@ -15,11 +21,11 @@ export default {
     <div class="teams d-flex justify-content-center align-items-center gap-3">
         <span class="team1 d-flex align-items-center gap-2">
             {{ team1.name }}
-            <img :src="`src/assets/img/${team1.logo}.png`" :alt="team1.name">
+            <img :src="createImagePath(team1.logo)" :alt="team1.name">
         </span>
         <span class="vs">VS</span>
         <span class="team2 d-flex align-items-center gap-2">
-            <img :src="`src/assets/img/${team2.logo}.png`" :alt="team2.name">
+            <img :src="createImagePath(team2.logo)" :alt="team2.name">
             {{ team2.name }}
         </span>
     </div>
