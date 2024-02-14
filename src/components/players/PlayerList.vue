@@ -1,19 +1,13 @@
 <script>
 import PlayerCard from './PlayerCard.vue';
-import GenericButton from '../generics/GenericButton.vue'
+import GenericButton from '../generics/GenericButton.vue';
+import { store } from "../../assets/data/store.js";
+
 
 export default {
     name: 'PlayerList',
     data: () => ({
-        players: [{
-            name: 'Adam Brown', role: 'Forwarder', shirtNumber: 7, src: 'player1.jpg'
-        }, {
-            name: 'Michael Kayn', role: 'Forwarder', shirtNumber: 9, src: 'player2.jpg'
-        }, {
-            name: 'Micheal Lee', role: 'Forwarder', shirtNumber: 11, src: 'player3.jpg'
-        }, {
-            name: 'Ethan Smith', role: 'Midfielder', shirtNumber: 15, src: 'player4.jpg'
-        }]
+        store,
     }),
     components: { PlayerCard, GenericButton }
 };
@@ -27,7 +21,7 @@ export default {
                 <h3>Players</h3>
             </div>
             <div class="row">
-                <div class="col col-3 d-flex align-items-center" v-for="(player, i) in players" :key="i">
+                <div class="col col-3 d-flex align-items-center" v-for="(player, i) in store.players" :key="i">
                     <PlayerCard :player="player" />
                 </div>
             </div>
