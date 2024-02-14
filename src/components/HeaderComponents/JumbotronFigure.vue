@@ -15,6 +15,7 @@ export default {
 </script>
 
 <template>
+    <!--JUMBOTRON FIGURE-->
     <figure>
         <img class="jumbotron-img" :src="createImagePath" alt="">
         <div class="jumbotron-text text-center lh-sm container-jumbotron">

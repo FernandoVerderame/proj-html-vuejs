@@ -16,6 +16,7 @@ export default {
 </script>
 
 <template>
+    <!--JUMBOTRON-->
     <JumbotronHeader :slider="slider" />
     <header>
         <div class="header-container">
@@ -39,6 +40,7 @@ export default {
                             :icon="['fab', 'twitter']" /></span>
                 </div>
             </div>
+            <!--NAVBAR-->
             <NavbarHeader :headerLinks="headerLinks" />
         </div>
     </header>

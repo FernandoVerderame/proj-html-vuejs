@@ -51,6 +51,7 @@ export default {
 
 <template>
     <div class="jumbotron">
+        <!--JUMBOTRON FIGURE-->
         <JumbotronFigure v-for="(slide, i) in slider" :key="slide.id" :slide="slide"
             :class="{ active: i === currentIndex }" />
         <div class="round button-slider prev" role="button" @click="goPrevIndex">
