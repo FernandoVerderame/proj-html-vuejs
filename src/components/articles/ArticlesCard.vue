@@ -1,4 +1,5 @@
 <script>
+import GenericButton from "../generics/GenericButton.vue";
 
 export default {
     name: 'ArticlesCard',
@@ -8,8 +9,8 @@ export default {
             const url = new URL(`../../assets/img/${this.article.image}`, import.meta.url)
             return url.href
         }
-    }
-
+    },
+    components: { GenericButton }
 };
 </script>
 <template>
@@ -19,7 +20,7 @@ export default {
         <div class="card-body">
             <h5 class="card-title">{{ article.title }}</h5>
             <p class="card-text">{{ article.text }}</p>
-            <a href="#" class="btn btn-primary">More</a>
+            <GenericButton buttonText="More" class="black" />
         </div>
     </div>
 </template>
