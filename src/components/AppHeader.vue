@@ -39,7 +39,7 @@ export default {
                             :icon="['fab', 'twitter']" /></span>
                 </div>
             </div>
-            <NavbarHeader />
+            <NavbarHeader :headerLinks="headerLinks" />
         </div>
     </header>
 </template>

@@ -1,45 +1,7 @@
 <script>
 export default {
     name: 'NavbarHeader',
-    data: () => ({
-        headerLinks: [
-            {
-                text: 'Home',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Fixtures & results',
-                url: '#',
-                current: true,
-            },
-            {
-                text: 'league table',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'players',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'gallery',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'blog',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'contact',
-                url: '#',
-                current: false,
-            },
-        ]
-    })
+    props: { headerLinks: Array }
 }
 
 </script>
