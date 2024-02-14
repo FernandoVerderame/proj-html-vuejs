@@ -115,11 +115,11 @@ export default {
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="team in teams" :key="team.id">
+                <tr v-for="(team, i) in teams" :key="team.id">
                     <!-- Team -->
                     <td class="team">
                         <!-- Team ID -->
-                        <span class="ps-2">{{ team.id }}</span>
+                        <span class="ps-2">{{ i + 1 }}</span>
 
                         <!-- Team image -->
                         <img :src="`src/assets/img/${team.logo}.png`" :alt="team.name">
