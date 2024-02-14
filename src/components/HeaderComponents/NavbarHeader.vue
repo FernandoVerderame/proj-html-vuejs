@@ -10,7 +10,7 @@ export default {
     <nav class="d-flex align-items-center justify-content-center mt-4">
         <!--HEADER'S LINKS-->
         <ul class="header-links d-flex align-items-cente gap-5 list-unstyled">
-            <li class="text-white fw-bold" v-for="(link, i) in headerLinks" :key="i">
+            <li class="text-white fw-bold" v-for="link in headerLinks" :key="link.id">
                 <a href="#" class="text-decoration-none text-white">{{ link.text.toUpperCase() }}</a>
             </li>
         </ul>
