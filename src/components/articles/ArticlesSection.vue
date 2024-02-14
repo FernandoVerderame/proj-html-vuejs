@@ -42,6 +42,7 @@ export default {
         ],
 
         activeIndex: 1,
+        interval: null,
     }),
     computed: {
         visibleCard() {
@@ -71,6 +72,28 @@ export default {
     },
 
     components: { ArticlesCard },
+    methods: {
+        autoPlay() {
+            this.interval = setInterval(() => {
+                this.activeIndex++
+                if (this.activeIndex > 4) {
+                    this.activeIndex = 1
+                }
+            }, 2000);
+        },
+
+        setIndex(n) {
+            this.activeIndex = n;
+            clearInterval(this.interval);
+            this.autoPlay()
+
+        }
+
+    },
+    created() {
+        this.autoPlay();
+    }
+
 
 };
 </script>
@@ -91,7 +114,7 @@ export default {
                 </div>
                 <div class="button-container">
                     <div class="carousel-button" v-for="n in 4" :key="n" role="button"
-                        :class="{ active: n === activeIndex }" @click="activeIndex = n"></div>
+                        :class="{ active: n === activeIndex }" @click="setIndex(n)"></div>
                 </div>
             </div>
         </div>
@@ -100,8 +123,6 @@ export default {
 
 <style lang="scss" scoped>
 #carousel {
-    // background-color: black;
-    // height: 600px;
     overflow: hidden;
 }
 
