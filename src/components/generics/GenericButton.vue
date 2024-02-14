@@ -35,6 +35,15 @@ button.transparent {
     border: 1px solid white;
 }
 
+button.white {
+    background-color: #fff;
+
+    a {
+        color: #062860;
+    }
+
+}
+
 a {
     text-decoration: none;
     color: white;
