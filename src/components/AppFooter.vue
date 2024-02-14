@@ -1,4 +1,5 @@
 <script>
+import { store } from "../assets/data/store.js";
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import FooterInfo from './footercomponents/FooterInfo.vue';
 import FooterNews from './footercomponents/FooterNews.vue';
@@ -8,48 +9,8 @@ export default {
     name: 'AppFooter',
     components: { FooterInfo, FooterNews, FooterList },
     data: () => ({
-        educationLinks: [
-            {
-                text: 'fixtures & results',
-                url: '#',
-                id: 1
-            },
-            {
-                text: 'league table',
-                url: '#',
-                id: 2
-            },
-            {
-                text: 'players',
-                url: '#',
-                id: 3
-            },
-            {
-                text: 'gallery',
-                url: '#',
-                id: 4
-            }],
-        quickLinks: [
-            {
-                text: 'home',
-                url: '#',
-                id: 5
-            },
-            {
-                text: 'blog',
-                url: '#',
-                id: 6
-            },
-            {
-                text: 'gallery',
-                url: '#',
-                id: 7
-            },
-            {
-                text: 'contact',
-                url: '#',
-                id: 8
-            }]
+        educationLinks: store.educationLinks,
+        quickLinks: store.quickLinks
     }),
     methods: {
         sendForm(term) {
