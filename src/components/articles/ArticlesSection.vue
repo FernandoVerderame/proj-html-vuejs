@@ -99,7 +99,7 @@ export default {
 </script>
 
 <template>
-    <section id="articles">
+    <section id="articles" class="pt-5">
         <div class="container">
             <div class="text-center">
                 <img class="flat-icon mb-3" src="../../assets/img/recommended (1).png" alt="">
