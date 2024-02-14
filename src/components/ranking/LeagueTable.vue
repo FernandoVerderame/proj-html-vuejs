@@ -1,19 +1,15 @@
 <script>
+import TrTable from './TrTable.vue';
+
 export default {
     name: 'LeagueTable',
+
+    components: { TrTable },
 
     props: {
         teams: Array
     }
 
-    /*
-    computed: {
-        teamSrc() {
-            const url = new URL(`../../assets/img/${this.teams.logo}.png`, import.meta.url);
-            return url.href;
-        }
-    }
-    */
 };
 </script>
 
@@ -33,31 +29,7 @@ export default {
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(team, i) in teams" :key="team.id">
-                    <!-- Team -->
-                    <td class="team">
-                        <!-- Team ID -->
-                        <span class="ps-2">{{ i + 1 }}</span>
-
-                        <!-- Team image -->
-                        <img :src="`src/assets/img/${team.logo}.png`" :alt="team.name">
-
-                        <!-- Team name -->
-                        <span>{{ team.name }}</span>
-                    </td>
-
-                    <!-- Wins -->
-                    <td>{{ team.win }}</td>
-
-                    <!-- Draw -->
-                    <td>{{ team.draw }}</td>
-
-                    <!-- Lose -->
-                    <td>{{ team.lose }}</td>
-
-                    <!-- Points -->
-                    <td class="score">{{ team.points }}</td>
-                </tr>
+                <TrTable v-for="(team, i) in teams" :key="team.id" :team="team" :i="i" />
             </tbody>
             <tfoot>
                 <tr>
@@ -90,24 +62,6 @@ thead {
             background-color: $black;
             color: white;
             font-size: 20px;
-        }
-    }
-}
-
-tbody {
-    td {
-        font-size: 20px;
-        text-align: center;
-        vertical-align: middle;
-        background-color: #F5F5F5;
-
-        img {
-            width: 60px;
-            margin: 0px 15px;
-        }
-
-        &.score {
-            font-weight: 700;
         }
     }
 }
