@@ -1,101 +1,15 @@
 <script>
+import TrTable from './TrTable.vue';
+
 export default {
     name: 'LeagueTable',
 
-    data: () => ({
-        teams: [
-            {
-                id: 1,
-                name: "Istanbul Sports",
-                logo: "league-club-1",
-                win: 18,
-                draw: 2,
-                lose: 0,
-                points: 42
-            },
-            {
-                id: 2,
-                name: "United Fs Club",
-                logo: "league-club-2",
-                win: 14,
-                draw: 2,
-                lose: 1,
-                points: 35
-            },
-            {
-                id: 3,
-                name: "Schalke Club",
-                logo: "league-club-3",
-                win: 13,
-                draw: 3,
-                lose: 0,
-                points: 32
-            },
-            {
-                id: 4,
-                name: "Inter Club",
-                logo: "league-club-4",
-                win: 13,
-                draw: 2,
-                lose: 1,
-                points: 31
-            },
-            {
-                id: 5,
-                name: "Madrid Club",
-                logo: "league-club-5",
-                win: 12,
-                draw: 1,
-                lose: 2,
-                points: 30
-            },
-            {
-                id: 6,
-                name: "Schalke Club",
-                logo: "league-club-6",
-                win: 11,
-                draw: 0,
-                lose: 3,
-                points: 28
-            },
-            {
-                id: 7,
-                name: "Arsenal Club",
-                logo: "league-club-7",
-                win: 10,
-                draw: 5,
-                lose: 0,
-                points: 26
-            },
-            {
-                id: 8,
-                name: "Bayern Club",
-                logo: "league-club-8",
-                win: 10,
-                draw: 2,
-                lose: 2,
-                points: 24
-            },
-            {
-                id: 9,
-                name: "Atletico Club",
-                logo: "league-club-9",
-                win: 9,
-                draw: 0,
-                lose: 4,
-                points: 20
-            }
-        ]
-    }),
+    components: { TrTable },
 
-    /*
-    computed: {
-        teamSrc() {
-            const url = new URL(`../../assets/img/${this.teams.logo}.png`, import.meta.url);
-            return url.href;
-        }
+    props: {
+        teams: Array
     }
-    */
+
 };
 </script>
 
@@ -115,31 +29,7 @@ export default {
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="team in teams" :key="team.id">
-                    <!-- Team -->
-                    <td class="team">
-                        <!-- Team ID -->
-                        <span class="ps-2">{{ team.id }}</span>
-
-                        <!-- Team image -->
-                        <img :src="`src/assets/img/${team.logo}.png`" :alt="team.name">
-
-                        <!-- Team name -->
-                        <span>{{ team.name }}</span>
-                    </td>
-
-                    <!-- Wins -->
-                    <td>{{ team.win }}</td>
-
-                    <!-- Draw -->
-                    <td>{{ team.draw }}</td>
-
-                    <!-- Lose -->
-                    <td>{{ team.lose }}</td>
-
-                    <!-- Points -->
-                    <td class="score">{{ team.points }}</td>
-                </tr>
+                <TrTable v-for="(team, i) in teams" :key="team.id" :team="team" :i="i" />
             </tbody>
             <tfoot>
                 <tr>
@@ -172,24 +62,6 @@ thead {
             background-color: $black;
             color: white;
             font-size: 20px;
-        }
-    }
-}
-
-tbody {
-    td {
-        font-size: 20px;
-        text-align: center;
-        vertical-align: middle;
-        background-color: #F5F5F5;
-
-        img {
-            width: 60px;
-            margin: 0px 15px;
-        }
-
-        &.score {
-            font-weight: 700;
         }
     }
 }

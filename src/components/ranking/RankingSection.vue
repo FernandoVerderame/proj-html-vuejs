@@ -1,9 +1,15 @@
 <script>
+import { store } from '../../assets/data/store';
 import LeagueTable from './LeagueTable.vue';
 import FixturesAndResults from './FixturesAndResults.vue';
 
 export default {
     name: 'RankingSection',
+
+    data: () => ({
+        teams: store.teams,
+        baseCalendar: store.baseCalendar
+    }),
 
     components: { LeagueTable, FixturesAndResults }
 };
@@ -14,8 +20,8 @@ export default {
     <section id="ranking">
         <div class="container">
             <div class="d-flex gap-5">
-                <LeagueTable />
-                <FixturesAndResults />
+                <LeagueTable :teams="teams" />
+                <FixturesAndResults :teams="teams" :baseCalendar="baseCalendar" />
             </div>
 
             <!-- Advertising -->
