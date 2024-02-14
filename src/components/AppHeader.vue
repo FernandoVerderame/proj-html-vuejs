@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <JumbotronHeader />
+    <JumbotronHeader :slider="slider" />
     <header>
         <div class="header-container">
             <div class="container">
