@@ -21,7 +21,7 @@ export default {
         <div class="container">
             <div class="d-flex gap-5">
                 <LeagueTable :teams="teams" />
-                <FixturesAndResults />
+                <FixturesAndResults :teams="teams" :baseCalendar="baseCalendar" />
             </div>
 
             <!-- Advertising -->
