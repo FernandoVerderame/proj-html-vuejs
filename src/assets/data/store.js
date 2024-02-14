@@ -205,7 +205,7 @@ export const store = reactive({
     }, {
         name: 'Ethan Smith', role: 'Midfielder', shirtNumber: 15, src: 'player4.jpg'
     }],
-    // ! ranking data --> ho cambiato il nome da Calendar a baseCalendar
+    // ranking data
     baseCalendar: [
         {
             id: 1,
@@ -289,6 +289,39 @@ export const store = reactive({
             title: 'How many football players are there in the world?',
             text: 'According to this report, there are more than 301 thousand football clubs, over 1.752 million [...]'
         },
+    ],
+    // sponsor data
+    sponsors: [
+        {
+            id: 1,
+            name: 'Regula 32',
+            image: 'client2.png'
+        },
+        {
+            id: 2,
+            name: 'Relans Konsept',
+            image: 'client3.png'
+        },
+        {
+            id: 3,
+            name: 'Standards and Partners',
+            image: 'client4.png'
+        },
+        {
+            id: 4,
+            name: 'Elit Eva Sanayi',
+            image: 'client7.png'
+        },
+        {
+            id: 5,
+            name: 'Nizam Turizm',
+            image: 'client9.png'
+        },
+        {
+            id: 6,
+            name: 'Zylkade Turizm',
+            image: 'client10.png'
+        }
     ],
     // * footer data
     educationLinks: [
