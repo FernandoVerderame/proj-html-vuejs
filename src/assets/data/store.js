@@ -253,8 +253,43 @@ export const store = reactive({
             team2ID: 9
         }
     ],
-    // ! articles data --> add array
-    articles: [],
+    articles: [
+        {
+            id: 1,
+            image: 'news1-1-150x150.png',
+            date: '29.05.2022 - Football',
+            title: 'What is Football?',
+            text: 'Football is a sport that is known as a ball game and is loved by [...]'
+        },
+        {
+            id: 2,
+            image: 'news3-1-150x150.png',
+            date: '29.05.2022 - Football',
+            title: 'Football Rules',
+            text: 'GOLDEN GOAL: In a football match, the goal scored by one of the teams in [...]'
+        },
+        {
+            id: 3,
+            image: 'news2-1-150x150.png',
+            date: '29.05.2022 - Football',
+            title: 'Football Features',
+            text: 'Football: It is an aerobic-based anaerobic sport in which jumps, kicks, turns, running with changing [...]'
+        },
+        {
+            id: 4,
+            image: 'news4-1-150x150.png',
+            date: '29.05.2022 - Football',
+            title: 'Football Terms',
+            text: 'GOLDEN GOAL: In a football match, the goal scored by one of the teams in [...]'
+        },
+        {
+            id: 5,
+            image: 'news6-1-150x150.png',
+            date: '29.05.2022 - Football',
+            title: 'How many football players are there in the world?',
+            text: 'According to this report, there are more than 301 thousand football clubs, over 1.752 million [...]'
+        },
+    ],
     // * footer data
     educationLinks: [
         {
