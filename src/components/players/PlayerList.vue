@@ -1,5 +1,6 @@
 <script>
 import PlayerCard from './PlayerCard.vue';
+import GenericButton from '../generics/GenericButton.vue'
 
 export default {
     name: 'PlayerList',
@@ -14,7 +15,7 @@ export default {
             name: 'Ethan Smith', role: 'Midfielder', shirtNumber: 15, src: 'player4.jpg'
         }]
     }),
-    components: { PlayerCard }
+    components: { PlayerCard, GenericButton }
 };
 </script>
 
@@ -31,7 +32,7 @@ export default {
                 </div>
             </div>
             <div class="action text-center">
-                <button class="btn btn-primary">View All Players</button>
+                <GenericButton buttonText="View All Players" class="black" />
             </div>
         </div>
     </section>
@@ -57,6 +58,10 @@ export default {
 
     .action {
         margin-top: 50px;
+
+        button {
+            border-radius: 50px;
+        }
     }
 }
 </style>

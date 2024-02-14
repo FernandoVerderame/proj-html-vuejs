@@ -1,11 +1,14 @@
 <script>
+import GenericButton from '../generics/GenericButton.vue'
+
 export default {
     name: 'FooterForm',
     data: () => ({
         searchTerm: ''
     }),
     props: { placeholder: String },
-    emits: ['submit-form']
+    emits: ['submit-form'],
+    components: { GenericButton }
 }
 </script>
 
@@ -15,7 +18,7 @@ export default {
             <input type="email" class="form-control" v-model.trim="searchTerm" :placeholder="placeholder">
         </div>
         <div class="button-group mt-2">
-            <button class="btn">Subscribe &#8594;</button>
+            <GenericButton buttonText="Subscribe &#8594;" class="white" />
         </div>
     </form>
 </template>
@@ -35,7 +38,6 @@ export default {
         height: 70px;
         border-radius: 50px;
         background-color: #fff;
-        color: #062860;
     }
 }
 </style>
