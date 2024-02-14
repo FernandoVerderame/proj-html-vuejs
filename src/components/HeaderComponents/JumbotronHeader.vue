@@ -1,6 +1,9 @@
 <script>
+import JumbotronFigure from './JumbotronFigure.vue'
+import GenericButton from '../generics/GenericButton.vue'
 export default {
     name: 'JumbotronHeader',
+    components: { JumbotronFigure, GenericButton },
     data: () => ({
         slider: [
             {
@@ -70,7 +73,8 @@ export default {
             <div class="jumbotron-text text-center lh-sm container-jumbotron">
                 <p class="big-text">{{ slide.primaryText }}</p>
                 <p class="fw-bold">{{ slide.description }}</p>
-                <button class="mt-3">Learn More</button>
+                <!-- <button class="mt-3">Learn More</button> -->
+                <GenericButton buttonText="Learn More &#8594;" class="transparent mt-4" />
             </div>
         </figure>
         <div class="round button-slider prev" role="button" @click="goPrevIndex">
