@@ -15,13 +15,13 @@ export default {
         <div class="education">
             <h4>Education</h4>
             <ul>
-                <LinkList v-for="(link, i) in educationLinks" :key="i" :link="link" />
+                <LinkList v-for="link in educationLinks" :key="link.id" :link="link" />
             </ul>
         </div>
         <div class="links">
             <h4>Quick Links</h4>
             <ul>
-                <LinkList v-for="(link, i) in quickLinks" :key="i" :link="link" />
+                <LinkList v-for="link in quickLinks" :key="link.id" :link="link" />
             </ul>
         </div>
     </div>

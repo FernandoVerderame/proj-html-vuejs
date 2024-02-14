@@ -11,36 +11,44 @@ export default {
         educationLinks: [
             {
                 text: 'fixtures & results',
-                url: '#'
+                url: '#',
+                id: 1
             },
             {
                 text: 'league table',
-                url: '#'
+                url: '#',
+                id: 2
             },
             {
                 text: 'players',
-                url: '#'
+                url: '#',
+                id: 3
             },
             {
                 text: 'gallery',
-                url: '#'
+                url: '#',
+                id: 4
             }],
         quickLinks: [
             {
                 text: 'home',
-                url: '#'
+                url: '#',
+                id: 5
             },
             {
                 text: 'blog',
-                url: '#'
+                url: '#',
+                id: 6
             },
             {
                 text: 'gallery',
-                url: '#'
+                url: '#',
+                id: 7
             },
             {
                 text: 'contact',
-                url: '#'
+                url: '#',
+                id: 8
             }]
     }),
     methods: {
