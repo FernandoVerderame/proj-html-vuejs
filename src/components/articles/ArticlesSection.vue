@@ -68,8 +68,6 @@ export default {
             return visibleCards
         }
 
-
-
     },
 
     components: { ArticlesCard },
@@ -78,24 +76,26 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="text-center">
-            <img class="flat-icon mb-3" src="../../assets/img/recommended (1).png" alt="">
-            <h3 class="fw-bold">Resent New & Articles</h3>
-            <p>Be aware of the football world</p>
-        </div>
-        <div id="carousel">
-            <div class="row gx-2">
-                <div class="col col-3" v-for="article in visibleCard" :key="article.id">
-                    <ArticlesCard :article="article" />
+    <section id="articles">
+        <div class="container">
+            <div class="text-center">
+                <img class="flat-icon mb-3" src="../../assets/img/recommended (1).png" alt="">
+                <h3 class="fw-bold">Resent New & Articles</h3>
+                <p>Be aware of the football world</p>
+            </div>
+            <div id="carousel">
+                <div class="row gx-2">
+                    <div class="col col-3" v-for="article in visibleCard" :key="article.id">
+                        <ArticlesCard :article="article" />
+                    </div>
+                </div>
+                <div class="button-container">
+                    <div class="carousel-button" v-for="n in 4" :key="n" role="button"
+                        :class="{ active: n === activeIndex }" @click="activeIndex = n"></div>
                 </div>
             </div>
-            <div class="button-container">
-                <div class="carousel-button" v-for="n in 4" :key="n" role="button" :class="{ active: n === activeIndex }"
-                    @click="activeIndex = n"></div>
-            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -117,6 +117,8 @@ export default {
     align-items: center;
     text-align: center;
     padding: 10px 20px;
+    box-shadow: 3px 3px 13px 0 rgba(0, 0, 0, 0.096);
+    border: 0;
 }
 
 .flat-icon {
@@ -148,5 +150,9 @@ export default {
 
 .disabled {
     display: none;
+}
+
+#articles {
+    background-color: #fbfbfb;
 }
 </style>
