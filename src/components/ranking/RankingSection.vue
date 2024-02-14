@@ -1,9 +1,15 @@
 <script>
+import { store } from '../../assets/data/store';
 import LeagueTable from './LeagueTable.vue';
 import FixturesAndResults from './FixturesAndResults.vue';
 
 export default {
     name: 'RankingSection',
+
+    data: () => ({
+        teams: store.teams,
+        baseCalendar: store.baseCalendar
+    }),
 
     components: { LeagueTable, FixturesAndResults }
 };
