@@ -11,7 +11,7 @@ export default {
     components: { MatchCard, GenericButton },
     computed: {
         checkRapido() {
-            return this.store.spotlightCalendar[0];
+            return store.spotlightCalendar[0];
         }
     }
 };

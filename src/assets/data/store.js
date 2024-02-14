@@ -253,7 +253,7 @@ export const store = reactive({
             team2ID: 9
         }
     ],
-    // ! articles data --> aggiungere array
+    // ! articles data --> add array
     articles: [],
     // * footer data
     educationLinks: [
