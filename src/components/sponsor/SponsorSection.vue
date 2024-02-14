@@ -6,7 +6,7 @@ export default {
     name: 'SponsorSection',
 
     data: () => ({
-        store,
+        sponsors: store.sponsors,
     }),
 
     components: { SponsorCard }
@@ -18,7 +18,7 @@ export default {
     <section id="sponsors">
         <div class="container">
             <div class="row">
-                <SponsorCard v-for="sponsor in store.sponsors" :key="sponsor.id" :sponsor="sponsor" />
+                <SponsorCard v-for="sponsor in sponsors" :key="sponsor.id" :sponsor="sponsor" />
             </div>
         </div>
     </section>
