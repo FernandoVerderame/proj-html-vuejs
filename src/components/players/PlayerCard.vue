@@ -8,9 +8,11 @@ export default {
         playerSrc() {
             const url = new URL(`../../assets/img/${this.player.src}`, import.meta.url);
             return url.href;
-        },
-        number() {
-            return this.player.shirtNumber < 10 ? this.player.shirtNumber = '0' + this.player.shirtNumber : this.player.shirtNumber
+        }
+    },
+    methods: {
+        number(player) {
+            return player < 10 ? player = '0' + player : player
         }
     }
 }
@@ -21,7 +23,7 @@ export default {
         <figure>
             <img :src="playerSrc" :alt="player.name" class="img-fluid">
             <div class="player-info">
-                <h6>{{ number }}</h6>
+                <h6>{{ number(player.shirtNumber) }}</h6>
                 <p>{{ player.name }} - {{ player.role }}</p>
             </div>
         </figure>
