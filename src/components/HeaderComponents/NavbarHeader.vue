@@ -18,6 +18,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .header-links li {
     border-bottom: 2px solid transparent;
     transition: all 1s linear;
@@ -25,6 +27,6 @@ export default {
 
 
 .header-links li:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid $white;
 }
 </style>

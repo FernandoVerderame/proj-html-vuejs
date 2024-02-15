@@ -60,7 +60,7 @@ thead {
             text-transform: uppercase;
             text-align: center;
             background-color: $black;
-            color: white;
+            color: $white;
             font-size: 20px;
         }
     }
@@ -68,7 +68,7 @@ thead {
 
 tfoot {
     td {
-        color: white;
+        color: $white;
         background-color: $black;
         font-size: 18px;
         font-weight: 700;

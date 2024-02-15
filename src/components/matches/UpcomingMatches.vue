@@ -34,13 +34,15 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../../assets/scss/vars' as *;
+
 .upcoming-matches {
     background-image: url(../../assets/img/saha.jpg);
     background-position: center;
     background-size: cover;
 
     * {
-        color: white;
+        color: $white;
     }
 
     h2 {

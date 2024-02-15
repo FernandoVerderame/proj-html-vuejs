@@ -16,8 +16,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 button {
-    color: white;
+    color: $white;
     border-radius: 27px;
     font-weight: 600;
     padding: 0 50px;
@@ -26,17 +28,17 @@ button {
 }
 
 button.black {
-    background-color: black;
+    background-color: $black;
     border: 1px solid;
 }
 
 button.transparent {
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid $white;
 }
 
 button.white {
-    background-color: #fff;
+    background-color: $white;
 
     a {
         color: #062860;
@@ -46,7 +48,7 @@ button.white {
 
 a {
     text-decoration: none;
-    color: white;
+    color: $white;
     line-height: 70px;
 }
 </style>

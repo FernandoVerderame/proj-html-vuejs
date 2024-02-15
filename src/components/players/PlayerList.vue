@@ -33,6 +33,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 #players {
     background-image: url('../../assets/img/player.jpg');
     min-height: 700px;
@@ -43,7 +45,7 @@ export default {
         margin-bottom: 50px;
 
         h3 {
-            color: #fff;
+            color: $white;
             font-weight: 700;
             vertical-align: top;
             font-size: 35px;

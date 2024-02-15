@@ -87,6 +87,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 #carousel {
     overflow: hidden;
 }
@@ -125,12 +127,12 @@ export default {
     height: 5px;
     width: 30px;
     border-radius: 5px;
-    background-color: #ebebeb;
+    background-color: $gray;
 }
 
 .carousel-button.active {
     width: 70px;
-    background-color: black;
+    background-color: $black;
     transition: all 0.5s linear;
 }
 
