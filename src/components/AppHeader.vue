@@ -47,6 +47,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/vars' as *;
+
 .container {
     padding-top: 15px;
     display: flex;
@@ -60,7 +62,7 @@ export default {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: $trasparent-black;
     position: absolute;
     top: 0;
     left: 0;

@@ -27,12 +27,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .jumbotron-text {
     position: absolute;
     bottom: 30px;
-    color: white;
+    color: $white;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.container-jumbotron {
+    width: 45%;
 }
 
 img {

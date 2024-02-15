@@ -64,6 +64,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .jumbotron {
     position: relative;
     height: 900px;
@@ -73,9 +75,9 @@ export default {
     position: absolute;
     top: 50%;
     font-size: 1rem;
-    color: white;
+    color: $white;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid $white;
     padding: 10px 15px;
 }
 
@@ -87,9 +89,6 @@ export default {
     left: 50px;
 }
 
-.container-jumbotron {
-    width: 40%;
-}
 
 figure.active {
     display: block;
