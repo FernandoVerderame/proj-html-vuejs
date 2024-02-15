@@ -48,7 +48,7 @@ h2 {
 }
 
 .matches .button-fixtures {
-    color: white;
+    color: $white;
     background-color: $black;
     font-size: 18px;
     font-weight: 700;
