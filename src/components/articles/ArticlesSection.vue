@@ -44,7 +44,7 @@ export default {
                 if (this.activeIndex > 4) {
                     this.activeIndex = 1
                 }
-            }, 2000);
+            }, 3000);
         },
 
         setIndex(n) {

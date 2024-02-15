@@ -28,7 +28,7 @@ export default {
         autoPlay() {
             this.intervall = setInterval(() => {
                 this.goNextIndex()
-            }, 2000)
+            }, 3000)
         },
 
         goPrevIndex() {
