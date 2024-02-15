@@ -44,8 +44,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/vars' as *;
+
 footer {
     background-image: url('../assets/img/footer-bg-football.jpg');
-    color: #fff;
+    color: $white;
 }
 </style>

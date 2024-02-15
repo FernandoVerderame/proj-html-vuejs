@@ -42,6 +42,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .info {
     ul {
         list-style-type: none;
@@ -75,7 +77,7 @@ export default {
         text-align: center;
         padding: 5px;
         border: 1px solid rgba(255, 255, 255, 0.3);
-        color: #fff;
+        color: $white;
         transition: border .4s linear;
 
         &:hover {
