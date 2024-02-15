@@ -29,9 +29,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../../assets/scss/vars' as *;
+
 .player-card {
     position: relative;
-    color: #fff;
+    color: $white;
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
@@ -67,7 +69,7 @@ export default {
         right: 0;
         bottom: 0;
         transform: translateY(-40%);
-        background-color: #000;
+        background-color: $black;
         transition: all 0.4s linear;
 
         border-radius: 20px;
