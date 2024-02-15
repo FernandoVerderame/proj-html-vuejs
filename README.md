@@ -101,7 +101,10 @@ Affrontate il progetto a mente serena allontanando ogni ansia, divertitevi mentr
 In bocca al lupo e buon divertimento!
 
 # Collaboratori
-- ## Fernando Verderame
-- ## Andrea Scaranari
-- ## Giordano Guidi
-- ## Santiago Galvan Colorado
+- ## [Fernando Verderame](https://github.com/FernandoVerderame)
+- ## [Andrea Scaranari](https://github.com/AndreaScaranari)
+- ## [Giordano Guidi](https://github.com/GiordanoGuidi)
+- ## [Santiago Galvan Colorado](https://github.com/SantiGalvan)
+
+
+![Diagramma Football Team 7](FootballTeam7Image.png)
