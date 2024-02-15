@@ -31,16 +31,16 @@ export default {
         </td>
 
         <!-- Wins -->
-        <td>{{ team.win }}</td>
+        <td class="text-center">{{ team.win }}</td>
 
         <!-- Draw -->
-        <td>{{ team.draw }}</td>
+        <td class="text-center">{{ team.draw }}</td>
 
         <!-- Lose -->
-        <td>{{ team.lose }}</td>
+        <td class="text-center">{{ team.lose }}</td>
 
         <!-- Points -->
-        <td class="score">{{ team.points }}</td>
+        <td class="score text-center">{{ team.points }}</td>
     </tr>
 </template>
 
